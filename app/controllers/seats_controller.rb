@@ -6,7 +6,7 @@ class SeatsController < ApplicationController
     end
     
     def new
-        @seats = Seat.new
+        @seat = Seat.new
     end
     
     def create
