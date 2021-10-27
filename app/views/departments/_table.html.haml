@@ -1,0 +1,18 @@
+%table.table.table-bordered
+    %thead
+        %tr
+            %th= 'Department'
+            %th= 'Whole name'
+            %th
+            %th
+    %tbody
+        - @departments.each do |department|
+            %tr
+                %td= department.name
+                %td= department_name(department.name)
+                %td
+                    %a{ href: department_path(department), target:'_blank' }= 'Detail'
+                %td
+                    %a{ href: department_path(department), data: { method: :delete }}= 'Delete'
+                %td
+                    %a{ href: edit_department_path(department)}= 'Edit'

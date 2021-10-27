@@ -1,0 +1,11 @@
+.alert.alert-danger
+    = flash[:danger]
+
+= form_for @department do |form|
+    .form-group
+        = form.label :name, 'Department name'
+        = form.text_field :name, class: 'form-control'
+
+
+    = form.submit
+%a.btn.btn-default{ href: departments_path }= 'Back to list'

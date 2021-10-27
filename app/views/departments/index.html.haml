@@ -1,0 +1,6 @@
+.alert.alert-success= flash[:success]
+
+%h1= 'List of departments'
+= render'table'
+
+%a.btn.btn-primary{ href: new_department_path}= 'New department'
