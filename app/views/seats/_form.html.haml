@@ -1,0 +1,11 @@
+.alert.alert-danger
+    = flash[:danger]
+
+= form_for @seat do |form|
+    .form-group
+        = form.label :name, 'Seat name'
+        = form.text_field :name, class: 'form-control'
+
+
+    = form.submit
+%a.btn.btn-default{ href: seats_path }= 'Back to list'

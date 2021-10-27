@@ -1,0 +1,16 @@
+%table.table.table-bordered
+    %thead
+        %tr
+            %th= 'Seat code'
+            %th
+            %th
+    %tbody
+        - @seats.each do |seat|
+            %tr
+                %td= seat.name
+                %td
+                    %a{ href: seat_path(seat), target:'_blank' }= 'Detail'
+                %td
+                    %a{ href: seat_path(seat), data: { method: :delete }}= 'Delete'
+                %td
+                    %a{ href: edit_seat_path(seat)}= 'Edit'
