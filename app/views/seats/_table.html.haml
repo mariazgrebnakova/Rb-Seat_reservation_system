@@ -2,12 +2,13 @@
     %thead
         %tr
             %th= 'Seat code'
-            %th
+            %th= 'Department'
             %th
     %tbody
         - @seats.each do |seat|
             %tr
                 %td= seat.name
+                %td= seat.department.name if seat.department_id.present?
                 %td
                     %a{ href: seat_path(seat), target:'_blank' }= 'Detail'
                 %td
