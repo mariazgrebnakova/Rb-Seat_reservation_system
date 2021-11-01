@@ -1,5 +1,5 @@
-%table.table.table-bordered
-    %thead
+%table.table.table-bordered.table-primary.table-striped.table-center
+    %thead.table-dark
         %tr
             %th= 'Seat code'
             %th= 'Department'
@@ -10,8 +10,8 @@
                 %td= seat.name
                 %td= seat.department.name if seat.department_id.present?
                 %td
-                    %a{ href: seat_path(seat), target:'_blank' }= 'Detail'
+                    %a{ href: seat_path(seat), target:'_blank', class: 'btn btn-info' }= 'Detail'
                 %td
-                    %a{ href: seat_path(seat), data: { method: :delete }}= 'Delete'
+                    %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
                 %td
-                    %a{ href: edit_seat_path(seat)}= 'Edit'
+                    %a{ href: edit_seat_path(seat), class:'btn btn-success'}= 'Edit'

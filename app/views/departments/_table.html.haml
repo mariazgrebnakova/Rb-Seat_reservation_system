@@ -11,8 +11,8 @@
                 %td= department.name
                 %td= department_name(department.name)
                 %td
-                    %a{ href: department_path(department), target:'_blank' }= 'Detail'
+                    %a{ href: department_path(department), target:'_blank', class:'btn btn-info' }= 'Detail'
                 %td
-                    %a{ href: department_path(department), data: { method: :delete }}= 'Delete'
+                    %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
                 %td
-                    %a{ href: edit_department_path(department)}= 'Edit'
+                    %a{ href: edit_department_path(department),  class:'btn btn-success'}= 'Edit'
