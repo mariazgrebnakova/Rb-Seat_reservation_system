@@ -14,6 +14,6 @@
                 %td
                     %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= 'Detail'
                 %td
-                    %a{ href: users_path, data: { method: :delete },  class:'btn btn-danger'}= 'Delete'
+                    %a{ href: user_path(user), data: { method: :delete },  class:'btn btn-danger'}= 'Delete'
                 %td
                     %a{ href: edit_user_path(user), class:'btn btn-success'}= 'Edit'

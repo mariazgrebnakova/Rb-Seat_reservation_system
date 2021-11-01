@@ -59,3 +59,4 @@ gem "haml-rails", "~> 2.0"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'bullet'
 gem 'rollbar'
+gem 'cancancan'
