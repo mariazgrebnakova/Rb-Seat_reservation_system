@@ -1,0 +1,19 @@
+%table.table.table-bordered.table-primary.table-striped.table-center
+    %thead.table-dark
+        %tr
+            %th= 'First name'
+            %th= 'Last name'
+            %th= 'Department'
+            %th
+    %tbody
+        - @users.each do |user|
+            %tr
+                %td= user.first_name
+                %td= user.last_name
+                %td= user.department.name if user.department_id.present?
+                %td
+                    %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= 'Detail'
+                %td
+                    %a{ href: users_path, data: { method: :delete },  class:'btn btn-danger'}= 'Delete'
+                %td
+                    %a{ href: edit_user_path(user), class:'btn btn-success'}= 'Edit'

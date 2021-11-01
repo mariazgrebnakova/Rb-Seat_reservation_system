@@ -1,0 +1,14 @@
+.alert.alert-danger
+    = flash[:danger]
+
+= form_for @user do |form|
+    .form-group
+        = form.label :name, 'First name'
+        = form.text_field :first_name, class: 'form-control'
+        = form.label :name, 'Last name'
+        = form.text_field :last_name, class: 'form-control'
+        = form.label :name, 'Department'
+        = form.collection_select :department_id, Department.order(:name), :id, :name
+
+    = form.submit
+%a.btn.btn-default{ href: users_path }= 'Back to list'
