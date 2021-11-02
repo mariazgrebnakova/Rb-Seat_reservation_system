@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: 2021-11-02
+  to: 2021-11-02
+  seat_id: 1
+  user_id: 1
+
+two:
+  from: 2021-11-02
+  to: 2021-11-02
+  seat_id: 1
+  user_id: 1

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users
     resources :departments
     resources :seats
+    resources :reservations
 
     root to: 'users#index'
 end

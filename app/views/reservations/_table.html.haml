@@ -1,0 +1,17 @@
+%table.table.table-bordered.table-primary.table-striped.table-center
+    %thead.table-dark
+        %tr
+            %th= 'Seat code'
+            %th= 'Reserved by'
+            %th
+    %tbody
+        - @reservations.each do |reservation|
+            %tr
+                %td= reservation.seat&.name 
+                %td= "#{reservation.user&.first_name} #{reservation.user&.last_name}"
+                %td
+                    %a{ href: reservation_path(reservation), target:'_blank', class: 'btn btn-info' }= 'Detail'
+                %td
+                    %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                %td
+                    %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'

@@ -1,0 +1,9 @@
+= form_for @reservation do |form|
+    .form-group
+        = form.label :name, 'Name'
+        = form.collection_select :user_id, User.order(:first_name), :id, :first_name
+        = form.label :name, 'Seat'
+        = form.collection_select :seat_id, Seat.order(:name), :id, :name
+
+    = form.submit
+%a.btn.btn-default{ href: reservations_path }= 'Back to list'
