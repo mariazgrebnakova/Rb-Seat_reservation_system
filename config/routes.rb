@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-    resources :departments
-end
+    devise_for :users
 
-Rails.application.routes.draw do
-    resources :seats
-end
-
-Rails.application.routes.draw do
     resources :users
+    resources :departments
+    resources :seats
+
+    root to: 'users#index'
 end

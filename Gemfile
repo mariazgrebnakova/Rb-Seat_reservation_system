@@ -60,3 +60,4 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'bullet'
 gem 'rollbar'
 gem 'cancancan'
+gem 'devise'
