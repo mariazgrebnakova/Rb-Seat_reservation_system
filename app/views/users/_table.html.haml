@@ -3,13 +3,15 @@
         %tr
             %th= 'First name'
             %th= 'Last name'
+            %th= 'Email'
             %th= 'Department'
-            %th
+            
     %tbody
         - @users.each do |user|
             %tr
                 %td= user.first_name
                 %td= user.last_name
+                %td= user.email
                 %td= user.department.name if user.department_id.present?
                 %td
                     %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= 'Detail'
