@@ -1,10 +1,10 @@
 %table.table.table-bordered.table-primary.table-striped.table-center
     %thead.table-dark
         %tr
-            %th= 'First name'
-            %th= 'Last name'
-            %th= 'Email'
-            %th= 'Department'
+            %th= t('users.index.first_name')
+            %th= t('users.index.last_name')
+            %th= t('users.index.email')
+            %th= t('users.index.department')
             
     %tbody
         - @users.each do |user|
@@ -14,8 +14,8 @@
                 %td= user.email
                 %td= user.department.name if user.department_id.present?
                 %td
-                    %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= 'Detail'
+                    %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= t('users.index.detail')
                 %td
-                    = link_to 'Delete', user, method: :delete, data: { confirm: 'Do you want to delete user?' }, class: 'btn btn-danger'
+                    = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'
                 %td
-                    %a{ href: edit_user_path(user), class:'btn btn-success'}= 'Edit'
+                    %a{ href: edit_user_path(user), class:'btn btn-success'}= t('users.index.edit')
