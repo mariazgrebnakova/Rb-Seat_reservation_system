@@ -22,3 +22,8 @@ en:
     edit:
       edit_user: 'Edit user'
       submit: 'Submit'
+
+  
+  reservations:
+    form:
+      date_from: 'Valid from'

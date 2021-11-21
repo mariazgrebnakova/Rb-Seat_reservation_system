@@ -25,3 +25,6 @@ sk:
       edit_user: 'Zmeniť používateľa'
       submit: 'Uložiť'
 
+  reservations:
+    form:
+      date_from: 'Od'
