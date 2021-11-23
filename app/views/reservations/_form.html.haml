@@ -2,8 +2,18 @@
     .form-group
         = form.label :name, 'Name'
         = form.collection_select :user_id, User.order(:first_name), :id, :first_name
+        %br
+        %br
         = form.label :name, 'Seat'
         = form.collection_select :seat_id, Seat.order(:name), :id, :name
+        %br
+        = form.label :name, t('reservations.form.date_from')
+        = form.text_field :from, 'data-provide' => 'datepicker'
+        = form.label :name, t('reservations.form.date_to')
+        = form.text_field :to, class: 'datepicker'
+
 
     = form.submit
 %a.btn.btn-default{ href: reservations_path }= 'Back to list'
+
+

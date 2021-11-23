@@ -28,3 +28,5 @@ sk:
   reservations:
     form:
       date_from: 'Od'
+      date_to: 'Do'
+

@@ -27,3 +27,4 @@ en:
   reservations:
     form:
       date_from: 'Valid from'
+      date_to: 'Valid to'
