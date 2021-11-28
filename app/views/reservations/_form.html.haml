@@ -14,9 +14,9 @@
         = form.collection_select :seat_id, Seat.where(department_id: current_user.department_id).order(:name), :id, :name
         %br
         = form.label :name, t('reservations.form.date_from')
-        = form.date_field :from
+        = form.date_field :from, :value => Date.today.strftime('%Y-%m-%d'), min: Date.today
         = form.label :name, t('reservations.form.date_to')
-        = form.date_field :to
+        = form.date_field :to,  :value => Date.today.strftime('%Y-%m-%d'), min: Date.today
 
 
     = form.submit
