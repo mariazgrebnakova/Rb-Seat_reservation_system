@@ -5,6 +5,10 @@
             %th= t('users.index.last_name')
             %th= t('users.index.email')
             %th= t('users.index.department')
+            - [:delete, :edit].each do |action|
+                - if can?(action, current_user)
+                    %th
+            %th
             
     %tbody
         - @users.each do |user|
@@ -15,7 +19,9 @@
                 %td= user.department.name if user.department_id.present?
                 %td
                     %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= t('users.index.detail')
-                %td
-                    = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'
-                %td
-                    %a{ href: edit_user_path(user), class:'btn btn-success'}= t('users.index.edit')
+                - if can?(:delete, current_user)
+                    %td
+                        = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'
+                - if can?(:edit, current_user)
+                    %td
+                        %a{ href: edit_user_path(user), class:'btn btn-success'}= t('users.index.edit')
