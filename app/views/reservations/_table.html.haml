@@ -3,6 +3,8 @@
         %tr
             %th= 'Seat code'
             %th= 'Reserved by'
+            %th= 'From'
+            %th= 'To'
             %th
             %th
             %th
@@ -11,6 +13,8 @@
             %tr
                 %td= reservation.seat&.name 
                 %td= "#{reservation.user&.first_name} #{reservation.user&.last_name}"
+                %td= reservation.from
+                %td= reservation.to
                 %td
                     %a{ href: reservation_path(reservation), target:'_blank', class: 'btn btn-info' }= 'Detail'
                 %td

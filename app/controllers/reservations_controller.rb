@@ -44,7 +44,7 @@ class ReservationsController < ApplicationController
     private
     
     def strong_params
-            params.require(:reservation).permit(:user_id, :seat_id)
+            params.require(:reservation).permit(:user_id, :seat_id, :from, :to)
     end
     
     def set_reservation

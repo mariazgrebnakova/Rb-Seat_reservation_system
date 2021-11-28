@@ -13,10 +13,10 @@
         = form.label :name, 'Seat'
         = form.collection_select :seat_id, Seat.where(department_id: current_user.department_id).order(:name), :id, :name
         %br
-        -# = form.label :name, t('reservations.form.date_from')
-        -#  = form.text_field :from, 'data-provide' => 'datepicker'
-        -# = form.label :name, t('reservations.form.date_to')
-        -# = form.text_field :to, class: 'datepicker' -->
+        = form.label :name, t('reservations.form.date_from')
+        = form.date_field :from
+        = form.label :name, t('reservations.form.date_to')
+        = form.date_field :to
 
 
     = form.submit
