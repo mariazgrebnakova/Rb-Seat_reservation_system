@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
     before_action :set_reservation, only: [:show, :destroy, :edit, :update]
+    before_action :set_user
+
     
     def index
         @reservations = Reservation.all
@@ -30,17 +32,28 @@ class ReservationsController < ApplicationController
     end
     
     def destroy
-        @reservation.destroy
-        redirect_to reservations_url
+        if current_user.is_admin?
+            @reservation.destroy
+            redirect_to reservations_url
+        elsif @reservation.user_id == current_user.id
+            @reservation.destroy
+            redirect_to reservations_url
+        end
     end
     
     private
     
     def strong_params
-            params.require(:reservation).permit(:user_id, :seat_id, :from, :to)
+            params.require(:reservation).permit(:user_id, :seat_id)
     end
     
     def set_reservation
             @reservation = Reservation.find(params[:id])
+    end
+
+    def set_user
+        if not current_user.is_admin?
+            user_id = current_user.id
+        end
     end
 end

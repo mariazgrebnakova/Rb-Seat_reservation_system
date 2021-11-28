@@ -4,6 +4,8 @@
             %th= 'Seat code'
             %th= 'Reserved by'
             %th
+            %th
+            %th
     %tbody
         - @reservations.each do |reservation|
             %tr
@@ -12,6 +14,13 @@
                 %td
                     %a{ href: reservation_path(reservation), target:'_blank', class: 'btn btn-info' }= 'Detail'
                 %td
-                    %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                    - if current_user.is_admin?
+                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                    - if reservation.user_id == current_user.id
+                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
                 %td
-                    %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'
+                    - if current_user.is_admin?
+                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'
+                    - if reservation.user_id == current_user.id
+                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'
+
