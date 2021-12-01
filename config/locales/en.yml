@@ -28,3 +28,23 @@ en:
     form:
       date_from: 'Valid from'
       date_to: 'Valid to'
+      name: 'Name'
+      seat: 'Seat'
+      create_reservation: 'Create reservation'
+
+    table:
+      seat_code: 'Seat code'
+      reserved_by: 'Reserved by'
+      detail: 'Detail'
+      delete: 'Delete'
+      edit: 'Edit'
+
+    index:
+      new_reservation: 'New reservation'
+      list_of_reservations: 'List of reservations'
+
+    edit:
+      edit_reservation: 'Edit reservation'
+
+    new:
+      new_reservation: 'New reservation'

@@ -1,10 +1,10 @@
 %table.table.table-bordered.table-primary.table-striped.table-center
     %thead.table-dark
         %tr
-            %th= 'Seat code'
-            %th= 'Reserved by'
-            %th= 'From'
-            %th= 'To'
+            %th= t('reservations.table.seat_code')
+            %th= t('reservations.table.reserved_by')
+            %th= t('reservations.form.date_from')
+            %th= t('reservations.form.date_to')
             %th
             %th
             %th
@@ -16,15 +16,15 @@
                 %td= reservation.from
                 %td= reservation.to
                 %td
-                    %a{ href: reservation_path(reservation), target:'_blank', class: 'btn btn-info' }= 'Detail'
+                    %a{ href: reservation_path(reservation), target:'_blank', class: 'btn btn-info' }= t('reservations.table.detail')
                 %td
                     - if current_user.is_admin?
-                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
                     - if reservation.user_id == current_user.id
-                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
                 %td
                     - if current_user.is_admin?
-                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'
+                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
                     - if reservation.user_id == current_user.id
-                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= 'Edit'
+                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
 

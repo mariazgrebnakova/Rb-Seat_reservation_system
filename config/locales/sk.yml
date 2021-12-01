@@ -29,4 +29,25 @@ sk:
     form:
       date_from: 'Od'
       date_to: 'Do'
+      name: 'Meno'
+      seat: 'Miesto'
+      create_reservation: 'Rezervovať'
+
+    table:
+      seat_code: 'Kód miesta'
+      reserved_by: 'Rezeroval'
+      detail: 'Zobraziť'
+      delete: 'Vymazať'
+      edit: 'Upraviť'
+
+    index: 
+      new_reservation: 'Nová rezervácia'
+      list_of_reservations: 'Zoznam rezervácií'
+
+    edit:
+      edit_reservation: 'Upraviť rezerváciu'
+
+    new:
+      new_reservation: 'Nová rezervácia'
+
 

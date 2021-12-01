@@ -1,16 +1,16 @@
 = form_for @reservation do |form|
     .form-group
         - if current_user.is_admin?
-            = form.label :name, 'Name'
+            = form.label :name, t('reservations.form.name')
             = form.collection_select :user_id, User.order(:first_name), :id, :first_name
             %br
             %br
         - if not current_user.is_admin?
-            = form.label :name, 'Name'
+            = form.label :name, t('reservations.form.name')
             = form.collection_select :user_id, User.where(id: current_user.id).order(:first_name), :id, :first_name
             %br
             %br
-        = form.label :name, 'Seat'
+        = form.label :name, t('reservations.form.seat')
         = form.collection_select :seat_id, Seat.where(department_id: current_user.department_id).order(:name), :id, :name
         %br
         = form.label :name, t('reservations.form.date_from')
@@ -19,7 +19,6 @@
         = form.date_field :to,  :value => Date.today.strftime('%Y-%m-%d'), min: Date.today
 
 
-    = form.submit
-%a.btn.btn-default{ href: reservations_path }= 'Back to list'
-
-
+    = form.submit value: t('reservations.form.create_reservation')
+    
+%a.btn.btn-default{ href: reservations_path }= t('users.show.back_to_list')
