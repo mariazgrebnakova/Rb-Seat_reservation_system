@@ -48,3 +48,7 @@ en:
 
     new:
       new_reservation: 'New reservation'
+
+    alerts:
+      more_reservations_by_user: 'This user has already some reservation for one or more of the chosen dates'
+      seat_is_taken: 'The chosen seat is not available at this date range'

@@ -50,4 +50,8 @@ sk:
     new:
       new_reservation: 'Nová rezervácia'
 
+    alerts:
+      more_reservations_by_user: 'Vybraný používateľ už má v rozmedzí daného dátumu jednu alebo viac rezervácií'
+      seat_is_taken: 'Vybrané miesto nie je už pre jeden alebo viacero z vybraných dní obsadené'
+
 
