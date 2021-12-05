@@ -7,7 +7,7 @@
             %br
         - if not current_user.is_admin?
             = form.label :name, t('reservations.form.name')
-            = form.collection_select :user_id, User.where(id: current_user.id).order(:first_name), :full_name
+            = form.collection_select :user_id, User.where(id: current_user.id).order(:first_name), :id, :full_name
             %br
             %br
         = form.label :name, t('reservations.form.seat')
