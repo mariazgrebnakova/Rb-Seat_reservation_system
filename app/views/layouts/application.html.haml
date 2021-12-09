@@ -11,6 +11,8 @@
   %body
     .container
       = render 'shared/header'
+      = link_to 'Slovenčina', root_path(locale: :sk)
+      = link_to 'English', root_path(locale: :en)
       #alerts-wrapper
         = render 'shared/alerts'
       = yield
