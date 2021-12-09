@@ -1,3 +1,11 @@
+.container.text-danger
+    - if @reservation.errors.full_messages.any?
+        - @reservation.errors.each do |x|
+            = x.type
+            %br
+%br/
+%br/
+
 = form_for @reservation do |form|
     .form-group
         - if current_user.is_admin?
