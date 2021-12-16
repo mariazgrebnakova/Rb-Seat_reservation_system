@@ -63,3 +63,4 @@ gem 'cancancan'
 gem 'devise'
 gem 'discard'
 gem 'rails-i18n'
+gem "letter_opener", group: :development
