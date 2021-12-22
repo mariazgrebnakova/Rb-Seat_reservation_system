@@ -1,0 +1,64 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+sk:
+  devise:
+    confirmations:
+      confirmed: "Tvoja e-mailová adresa bola úspešne potvrdená."
+      send_instructions: "V priebehu pár minút Ti budú zaslané inštrukcie k potvrdeniu Tvoje e-mailovej adresy."
+      send_paranoid_instructions: "V prípade, že Tvoj e-mail existuje v našej databáze, budú Ti v najbližších minútach zaslané inštrukcie k potvrdeniu Tvoje e-mailovej adresy."
+    failure:
+      already_authenticated: "Už si prihlásený."
+      inactive: "Tvoj účet ešte nebol aktivovaný."
+      invalid: "Neplatné %{authentication_keys} alebo heslo."
+      locked: "Tvoj účet bol zablokovaný."
+      last_attempt: "Do zablokovania Ti ostáva posledný pokus."
+      not_found_in_database: "Neplatný %{authentication_keys} alebo heslo."
+      timeout: "Bol si automatickz odhlásený. Prosím prihlás sa znovu."
+      unauthenticated: "Pred pokračovaním je treba sa zaregistrovať alebo prihlásiť."
+      unconfirmed: "Pred pokračovaním je potrebné potvrdiť e-mailovú adresu."
+    mailer:
+      confirmation_instructions:
+        subject: "Inštrukcie k potvrdeniu"
+      reset_password_instructions:
+        subject: "Inštrukcie k obnove hesla"
+      unlock_instructions:
+        subject: "Inštrukcie k odblokovaniu konta"
+      email_changed:
+        subject: "E-mail bol zmenený"
+      password_change:
+        subject: "Heslo bolo zmenené"
+    omniauth_callbacks:
+      failure: "Tvoje konto nemohlo byť overené pomocou %{kind} pretože \"%{reason}\"."
+      success: "ǔspešne overené z %{kind} konta."
+    passwords:
+      no_token: "Prístup k stránke bez presmerovania z priamo z e-mailu o obnove hesla nie je možný. Ak si bol presmerovaný z e-mailu o obnove hesla, prosím skontroluj, či si použil plnú URL adresu, ktorá Ti bola zaslaná."
+      send_instructions: "V priebehu niekoľkých minút Ti bude doručený e-mail s inštrukciami k obnove hesla."
+      send_paranoid_instructions: "Ak Tvoja e-mailová adresa existuje v našej databáze, v priebehu niekoľkých minút obdržíš link pre obnovu hesla."
+      updated: "Tvoje heslo bolo úspešne zmenené a bol si prihlásený."
+      updated_not_active: "Tvoje heslo bolo úspešne zmenené."
+    registrations:
+      destroyed: "Tvoje konto bol úspešne zrušené. Dúfame, že sa skoro uvidíme."
+      signed_up: "Bol si úspešne zaregistrovaný."
+      signed_up_but_inactive: "Registrácia bola úspešná. Žiaľ Ťa však nevieme prihlásiť, nakoľko Tvoje konto ešte nebolo aktivované."
+      signed_up_but_locked: "Registrácia bola úspešná. Žiaľ Ťa však nevieme prihlásiť, nakoľko bolo Tvoje konto za message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+      update_needs_confirmation: "Na Tvoju e-mailovú adresu sme zaslali e-mail s potvrdzovacím linkom. Prosím aktivuj si  konto pomocou kliknutia na link."
+      updated: "Tvoje konto bolo úspešne zmenené."
+      updated_but_not_signed_in: "Tvoje konto bolo úspešne zmenené, avšak kvôli zmene hesla sa prosím prihlás ešte raz."
+    sessions:
+      signed_in: "Bol si úspešne prihlásený."
+      signed_out: "Bol si úspešne odhlásený."
+      already_signed_out: "Bol si úspešne odhlásený."
+    unlocks:
+      send_instructions: "V priebehu niekoľkých minút obrdžíš e-mail s inštrukciami k odblokovaniu svojho konta."
+      send_paranoid_instructions: "Pokiaľ Tvoje konto existuje, v priebehu niekoľkých minút obdržíš e-mail s inštrukciami k odblokovaniu konta."
+      unlocked: "Tvoje konto bolo úspešne odblokované. Prosím prihlás sa."
+  errors:
+    messages:
+      already_confirmed: "bolo potvrdené. Teraz sa môžeš prihásiť."
+      confirmation_period_expired: "potrebuje byť potvrdené v priebehu, prosím vyžiadaj si túto akciu opäť."
+      expired: "stratilo platnosť, prosím vyžiadaj si nové."
+      not_found: "nenájdené"
+      not_locked: "nebolo zablokované"
+      not_saved:
+        one: "Žiaľ sa vyskytla chyba, ktorá zabránila, že %{resource} nebol uložený."
+        other: "%{count} chýb spôsobilo, že %{resource} nebol uložený."
