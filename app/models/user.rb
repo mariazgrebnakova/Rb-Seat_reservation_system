@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def is_discarded
+    discarded_at == nil ? "false": "true"
+  end
 end
