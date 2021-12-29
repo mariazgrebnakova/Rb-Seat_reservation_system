@@ -89,6 +89,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.6)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     discard (1.2.0)
       activerecord (>= 4.2, < 7)
     dotenv (2.7.6)
@@ -259,6 +262,7 @@ DEPENDENCIES
   cancancan
   capybara (>= 3.26)
   devise
+  devise_invitable (~> 2.0.0)
   discard
   dotenv-rails
   haml-rails (~> 2.0)

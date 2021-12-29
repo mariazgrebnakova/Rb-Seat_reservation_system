@@ -60,5 +60,5 @@ sk:
       not_found: "nenájdené"
       not_locked: "nebolo zablokované"
       not_saved:
-        one: "Žiaľ sa vyskytla chyba, ktorá zabránila, že %{resource} nebol uložený."
-        other: "%{count} chýb spôsobilo, že %{resource} nebol uložený."
+        one: "Žiaľ sa vyskytla chyba, ktorá zabránila, že %{resource} nebol uložený:"
+        few: "%{count} chýb spôsobilo, že %{resource} nebol uložený:"

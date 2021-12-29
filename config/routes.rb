@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-    devise_for :users
+    # Use a custom invitations controller.
+    devise_for :users, controllers: { invitations: 'users/invitations' }
 
     resources :users
     resources :departments

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :set_user, only: [:show, :destroy, :edit, :update]
+    before_action :set_user, only: [:show, :destroy, :edit, :update, :invite]
     
     #authorize_resource
 
@@ -36,7 +36,12 @@ class UsersController < ApplicationController
         @user.discard
         redirect_to users_url
     end
-    
+ 
+    def invite
+        @user.invite!(strong_params)
+        redirect_to users url
+    end
+
     private
     
     def strong_params
@@ -46,5 +51,5 @@ class UsersController < ApplicationController
     def set_user
             @user = User.find(params[:id])
     end
-    
+
 end
