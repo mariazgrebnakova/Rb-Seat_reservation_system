@@ -11,6 +11,8 @@ import "@popperjs/core"
 
 require("bootstrap/dist/js/bootstrap")
 require('jquery')
+require('packs/jquery.maphilight')
+require('packs/jquery.maphilight.metadata')
 
 Rails.start()
 Turbolinks.start()
