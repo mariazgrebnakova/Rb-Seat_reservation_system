@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     end
     
     def destroy
-        @user.discard
+        @user.destroy
         redirect_to users_url
     end
  
