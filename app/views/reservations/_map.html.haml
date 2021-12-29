@@ -1,0 +1,16 @@
+:javascript
+    $(function() {
+        $('.map').maphilight({
+            /*fillColor: '880808',*/
+            alwaysOn: true
+        });
+    });
+
+= image_tag("test_map", alt: "test_map", usemap:"#image-map", class: "map" )
+%map{:name => "image-map"}
+    -#    %area{:alt => "CUS001", :coords => "115,152,314,246", :href => "/seats", :shape => "rect", :target => "_blank", :title => "CUS001", :class => seat_color}/
+    -#    %area{:alt => "CUS002", :coords => "360,147,552,246", :href => "/seats", :shape => "rect", :target => "_blank", :title => "CUS002", :class => :seat_color}/
+    -#    %area{:alt => "CUS003", :coords => "586,152,765,245", :href => "/seats", :shape => "rect", :target => "_blank", :title => "CUS003", :class => :seat_color}/
+ 
+    -Seat.where(id: [1,2,3]).each do |seat|
+        %area{:alt => seat.name, :coords => seat.coordinates, :href => "/seats", :shape => "rect", :target => "_blank", :title => seat.name, :class => seat.seat_color}/
