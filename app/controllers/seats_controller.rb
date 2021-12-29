@@ -37,7 +37,7 @@ class SeatsController < ApplicationController
     private
     
     def strong_params
-            params.require(:seat).permit(:name, :department_id)
+            params.require(:seat).permit(:name, :department_id, :coordinates)
     end
     
     def set_seat
