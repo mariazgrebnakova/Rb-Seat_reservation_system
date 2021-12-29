@@ -1,28 +1,28 @@
 sk:
   devise:
     failure:
-      invited: "You have a pending invitation, accept it to finish creating your account."
+      invited: "Pozvánka ešte nebola prijatá. Prosím potvrď ju a pokračuj s prihlásením"
     invitations:
-      send_instructions: "An invitation email has been sent to %{email}."
-      invitation_token_invalid: "The invitation token provided is not valid!"
-      updated: "Your password was set successfully. You are now signed in."
-      updated_not_active: "Your password was set successfully."
-      no_invitations_remaining: "No invitations remaining"
-      invitation_removed: "Your invitation was removed."
+      send_instructions: "Pozvánka bola zaslaná na email %{email}."
+      invitation_token_invalid: "Token pozvánky nie je platný!"
+      updated: "Heslo bolo úspešne nastavené. Bol si prihlásený."
+      updated_not_active: "Heslo bolo úspešne nastavené."
+      no_invitations_remaining: "Nezostala žiadna pozvánka"
+      invitation_removed: "Tvoja pozvánka bola vymazaná."
       new:
-        header: "Send invitation"
-        submit_button: "Send an invitation"
+        header: "Poslať pozvánku"
+        submit_button: "Odoslať pozvánku"
       edit:
-        header: "Set your password"
-        submit_button: "Set my password"
+        header: "Nastavenie hesla"
+        submit_button: "Nastaviť heslo"
     mailer:
       invitation_instructions:
-        subject: "Invitation instructions"
-        hello: "Hello %{email}"
-        someone_invited_you: "Someone has invited you to %{url}, you can accept it through the link below."
-        accept: "Accept invitation"
-        accept_until: "This invitation will be due in %{due_date}."
-        ignore: "If you don't want to accept the invitation, please ignore this email. Your account won't be created until you access the link above and set your password."
+        subject: "Inštrukcie k pozvánke"
+        hello: "Ahoj %{email}"
+        someone_invited_you: "Niekto ťa pozval do %{url}, pozvanie môžeš prijať kliknutím na link nižšie."
+        accept: "Prijať pozvanie"
+        accept_until: "Táto pozvánka je platná do %{due_date}."
+        ignore: "V prípade, že si nepraješ akceptovať pozvánku, prosím ignoruj tento email. Tvoje konto nebude vytvorené pokiaľ neklikneš na odkaz vyššie a nenastavíš si heslo."
   time:
     formats:
       devise:
