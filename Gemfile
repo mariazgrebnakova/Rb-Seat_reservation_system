@@ -65,3 +65,4 @@ gem 'discard'
 gem 'rails-i18n'
 gem "letter_opener", group: :development
 gem 'devise_invitable', '~> 2.0.0'
+gem 'maphilight-rails'

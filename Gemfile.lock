@@ -135,6 +135,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    maphilight-rails (1.0.0)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -272,6 +273,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   letter_opener
   listen (~> 3.3)
+  maphilight-rails
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
