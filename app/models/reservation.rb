@@ -50,7 +50,6 @@ class Reservation < ApplicationRecord
                 user_reservations_dates << date
             end 
         end
-        puts user_reservations_dates
         return user_reservations_dates
     end
 
@@ -64,7 +63,6 @@ class Reservation < ApplicationRecord
                 has_no_reservation = false
             end
         end
-        puts has_no_reservation
         return has_no_reservation
     end
 
