@@ -6,6 +6,10 @@ class Reservation < ApplicationRecord
     validate :validate_seat_is_empty
     validate :validates_user_has_no_reservation
 
+    validates :seat_id, presence: true
+
+    scope :for_range, ->(from, to) { where('"from" <= ? AND "to" >= ?', to, from) }
+
     private
 
     def from_must_be_before_to_date

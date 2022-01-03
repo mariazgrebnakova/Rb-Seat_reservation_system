@@ -1,0 +1,45 @@
+%h1= t('reservations.index.list_of_reservations')
+
+= form_tag submit_from_map_reservations_path do
+
+  - if @reservation && @reservation.errors.present?
+    .alert.alert-danger
+      %ul.list-unstyled
+        - @reservation.errors.full_messages.each do |message|
+          %li= message
+
+  = date_field_tag :from, params[:from], min: Date.today
+  = date_field_tag :to, params[:to], min: Date.today
+
+  = button_tag name: nil do
+    = t('reservations.map.show_seats')
+
+  = hidden_field_tag :seat_id, params[:seat_id]
+
+  = image_tag("test_map", alt: "test_map", usemap:"#image-map", class: "map" )
+
+  :javascript
+    // TODO: Presunut do suboru application.js
+
+    $(function() {
+      $('.map').maphilight({
+        /*fillColor: '880808',*/
+        alwaysOn: true
+      });
+
+      // Na elemente `area` pod elementom `map` pocuvam na `click` event
+      $('map area').click(function() {
+        seat_id = $(this).data('id')
+
+        $('[name=seat_id]').val(seat_id)
+      })
+    });
+
+  %map.image-map{ name: 'image-map' }
+    - @seats.each do |seat|
+      - color = @reservations_by_seat.key?(seat.id) ? 'FA8072' : '3CB371' # FA8072 = red, 3CB371 = green
+
+      %area{ alt: seat.name, coords: seat.coordinates, shape: 'rect', title: seat.name, class: "{fillColor:'#{color}'}'", data: { id: seat.id } }
+
+  = button_tag name: 'type', value: 'reserve' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
+    = t('reservations.map.reserve')

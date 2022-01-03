@@ -23,7 +23,13 @@ sk:
       
     edit:
       edit_user: 'Zmeniť používateľa'
-      submit: 'Uložiť'
+      submit: 'Odoslať'
+
+  menu:
+    departments: 'Oddelenia'
+    seats: 'Stoly'
+    reservations: 'Rezervácie'
+    users: 'Používatelia'
 
   reservations:
     form:
@@ -32,6 +38,9 @@ sk:
       name: 'Meno'
       seat: 'Miesto'
       create_reservation: 'Rezervovať'
+
+    map:
+      show_on_map: 'Zobraziť na mape'
 
     table:
       seat_code: 'Kód miesta'

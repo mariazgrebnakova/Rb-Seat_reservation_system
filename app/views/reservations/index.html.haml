@@ -1,6 +1,8 @@
 %h1= t('reservations.index.list_of_reservations')
 
-= render'map'
+.alert.alert-info
+  = link_to t('reservations.map.show_on_map'), map_reservations_path
+
 = render'table'
 
 %a.btn.btn-primary{ href: new_reservation_path}= t('reservations.index.new_reservation')
