@@ -23,6 +23,11 @@ en:
       edit_user: 'Edit user'
       submit: 'Submit'
 
+  menu:
+    departments: 'Departments'
+    seats: 'Seats'
+    reservations: 'Reservations'
+    users: 'Users'
   
   reservations:
     form:
@@ -31,6 +36,11 @@ en:
       name: 'Name'
       seat: 'Seat'
       create_reservation: 'Create reservation'
+
+    map:
+      show_on_map: 'Show on map'
+      show_seats: 'Show seats'
+      reserve: 'Reserve for me!'
 
     table:
       seat_code: 'Seat code'

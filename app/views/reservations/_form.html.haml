@@ -1,32 +1,27 @@
 .container.text-danger
-    - if @reservation.errors.full_messages.any?
-        - @reservation.errors.each do |x|
-            = x.type
-            %br
+  - if @reservation.errors.full_messages.any?
+    - @reservation.errors.each do |x|
+      = x.type
+      %br
 %br/
 %br/
 
 = form_for @reservation do |form|
-    .form-group
-        - if current_user.is_admin?
-            = form.label :name, t('reservations.form.name')
-            = form.collection_select :user_id, User.all.order(:first_name), :id, :full_name
-            %br
-            %br
-        - if not current_user.is_admin?
-            = form.label :name, t('reservations.form.name')
-            = form.collection_select :user_id, User.where(id: current_user.id).order(:first_name), :id, :full_name
-            %br
-            %br
-        = form.label :name, t('reservations.form.seat')
-        = form.collection_select :seat_id, Seat.where(department_id: current_user.department_id).order(:name), :id, :name
-        %br
-        = form.label :name, t('reservations.form.date_from')
-        = form.date_field :from, :value => Date.today.strftime('%Y-%m-%d'), min: Date.today
-        = form.label :name, t('reservations.form.date_to')
-        = form.date_field :to,  :value => Date.today.strftime('%Y-%m-%d'), min: Date.today
+  .form-group
+    = form.label :name, t('reservations.form.name')
+    = form.collection_select :user_id, users_for_select, :id, :full_name
 
+  .form-group
+    = form.label :name, t('reservations.form.seat')
+    = form.collection_select :seat_id, seats_for_select.order(:name), :id, :name
 
-    = form.submit value: t('reservations.form.create_reservation')
-    
+  .form-group
+    = form.label :name, t('reservations.form.date_from')
+    = form.date_field :from, min: Date.today
+
+    = form.label :name, t('reservations.form.date_to')
+    = form.date_field :to, min: Date.today
+
+  = form.submit value: t('reservations.form.create_reservation')
+
 %a.btn.btn-default{ href: reservations_path }= t('users.show.back_to_list')
