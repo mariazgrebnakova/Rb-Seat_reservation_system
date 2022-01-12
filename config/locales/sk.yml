@@ -41,6 +41,9 @@ sk:
 
     map:
       show_on_map: 'Zobraziť na mape'
+      show_seats: 'Zobraziť miesta'
+      reserve: 'Zarezervovať'
+      confirm_reservation: 'Prosím potvrď svoju rezerváciu pre miesto %{reservation_seats} od %{reservation_date_begin} do %{reservation_date_finish}'
 
     table:
       seat_code: 'Kód miesta'

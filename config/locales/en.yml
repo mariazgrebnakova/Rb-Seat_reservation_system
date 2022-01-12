@@ -41,6 +41,7 @@ en:
       show_on_map: 'Show on map'
       show_seats: 'Show seats'
       reserve: 'Reserve for me!'
+      confirm_reservation: 'Please confirm your reservation for seat nr. %{reservation_seats} for dates %{reservation_date_begin} - %{reservation_date_finish}'
 
     table:
       seat_code: 'Seat code'
