@@ -1,3 +1,37 @@
-= @reservation.id
+%h5= "#{t('reservations.show.reservation_id')}: #{@reservation.id}"
+
+%br
+
+%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+  %tbody
+    %tr
+      %td= t('reservations.show.reservation_id')
+      %td= @reservation.id
+
+    %tr
+      %td= t('reservations.show.user')
+      %td= @reservation.user.full_name
+      
+    %tr
+      %td= t('reservations.show.seat')
+      %td= @reservation.seat.name
+
+    %tr
+      %td= t('reservations.show.from')
+      %td= @reservation.from
+
+    %tr
+      %td= t('reservations.show.to')
+      %td= @reservation.to
+
+    %tr
+      %td= t('reservations.show.days_count')
+      %td= (@reservation.from..@reservation.to).count
+
+    %tr
+      %td= t('reservations.show.created_at')
+      %td= @reservation.created_at.getlocal
+
+%br
 
 %a.btn.btn-default{ href: reservations_path }= 'Back to list'

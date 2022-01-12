@@ -74,5 +74,4 @@ class Reservation < ApplicationRecord
         errors.add(:user_id, "More than one reservation by user on this date") unless
             user_has_no_reservation == true
     end
-
 end

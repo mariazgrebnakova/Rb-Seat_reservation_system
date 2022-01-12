@@ -114,6 +114,15 @@ en:
       new_reservation: 'New reservation'
       list_of_reservations: 'List of reservations'
 
+    show:
+      reservation_id: 'Reservation ID'
+      from: 'Reservation valid from'
+      to: 'Reservation valid to'
+      days_count: 'Days count'
+      user: 'User'
+      seat: 'Seat'
+      created_at: 'Created at'
+
     edit:
       edit_reservation: 'Edit reservation'
 

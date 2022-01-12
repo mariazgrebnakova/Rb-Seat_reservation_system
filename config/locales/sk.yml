@@ -115,6 +115,15 @@ sk:
       new_reservation: 'Nová rezervácia'
       list_of_reservations: 'Zoznam rezervácií'
 
+    show:
+      reservation_id: 'ID rezervácie'
+      from: 'Rezervácia od'
+      to: 'Rezervácia do'
+      days_count: 'Počet dní'
+      user: 'Používateľ'
+      seat: 'Miesto'
+      created_at: 'Dátum vytvorenia'
+
     edit:
       edit_reservation: 'Upraviť rezerváciu'
 
