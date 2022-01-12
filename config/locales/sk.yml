@@ -12,7 +12,7 @@ sk:
       last_name: 'Priezvisko'
       email: 'Email'
       department: 'Oddelenie'
-      detail: 'Profil'
+      detail: 'Zobraziť'
       delete: 'Vymazať'
       edit: 'Zmeniť'
       new_user: 'Nový používateľ'

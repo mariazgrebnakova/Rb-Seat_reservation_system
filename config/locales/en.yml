@@ -10,7 +10,7 @@ en:
       last_name: 'Last name'
       email: 'Email'
       department: 'Department'
-      detail: 'Detail'
+      detail: 'Show'
       delete: 'Delete'
       edit: 'Edit'
       new_user: 'New user'
