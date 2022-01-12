@@ -1,3 +1,17 @@
-= @seat.name
+%h5= "#{t('seats.index.seat_code')}: #{@seat.name}"
 
-%a.btn.btn-default{ href: seats_path }= 'Back to list'
+%br
+
+%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+  %tbody
+    %tr
+      %td= t('seats.index.seat_code')
+      %td= @seat.name
+
+    %tr
+      %td= t('seats.index.department')
+      %td= @seat.department.name
+
+%br
+
+%a.btn.btn-default{ href: seats_path }= t('seats.new.back_to_list')

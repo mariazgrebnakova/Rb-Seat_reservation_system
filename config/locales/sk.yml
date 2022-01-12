@@ -60,6 +60,30 @@ sk:
       department_updated: 'Oddelenie bolo úspešne zmenené'
       department_not_updated: 'Oddelenie nebolo zmenené'
 
+  seats:
+    index:
+      list_of_seats: 'Zoznam miest'
+      seat_code: 'Kód miesta'
+      show: 'Zobraziť'
+      edit: 'Upraviť'
+      delete: 'Vymazať'
+      department: 'Oddelenie'
+
+    new:
+      coordinates: 'Súradnice'
+      back_to_list: 'Späť na zoznam miest'
+      save: 'Uložiť'
+      title: 'Nové miesto'
+
+    edit:
+      title: 'Upraviť miesto'
+
+    alerts:
+      seat_saved: 'Miesto bolo úspešne uložené'
+      seat_not_saved: 'Miesto nebolo uložené'
+      seat_updated: 'Miesto bolo úspešne zmenené'
+      seat_not_updated: 'Miesto nebolo zmenené'
+
   menu:
     departments: 'Oddelenia'
     seats: 'Stoly'

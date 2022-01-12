@@ -1,8 +1,8 @@
 %table.table.table-bordered.table-primary.table-striped.table-center
     %thead.table-dark
         %tr
-            %th= 'Seat code'
-            %th= 'Department'
+            %th= t('seats.index.seat_code')
+            %th= t('seats.index.department')
             %th
     %tbody
         - @seats.each do |seat|
@@ -10,8 +10,8 @@
                 %td= seat.name
                 %td= seat.department.name if seat.department_id.present?
                 %td
-                    %a{ href: seat_path(seat), target:'_blank', class: 'btn btn-info' }= 'Detail'
+                    %a{ href: seat_path(seat), target:'_blank', class: 'btn btn-info' }= t('seats.index.show')
                 %td
-                    %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                    %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
                 %td
-                    %a{ href: edit_seat_path(seat), class:'btn btn-success'}= 'Edit'
+                    %a{ href: edit_seat_path(seat), class:'btn btn-success'}= t('seats.index.edit')

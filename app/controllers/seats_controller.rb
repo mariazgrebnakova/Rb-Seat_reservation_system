@@ -13,18 +13,18 @@ class SeatsController < ApplicationController
         @seat = Seat.new(strong_params)
     
         if @seat.save
-               redirect_to seats_url, flash: { success: 'Seat saved...'}
+               redirect_to seats_url, flash: { success: t('seats.alerts.seat_saved')}
         else
-                flash[:danger] = 'Seat not saved...'
+                flash[:danger] = t('seats.alerts.seat_not_saved')
                 render :new
         end
     end
     
     def update
         if @seat.update(strong_params)
-                redirect_to seat_url(@seat), flash: { success: 'Seat updated...'}
+                redirect_to seat_url(@seat), flash: { success: t('seats.alerts.seat_updated')}
         else
-            flash[:danger] = 'Seat not updated...'
+            flash[:danger] = t('seats.alerts.seat_not_updated')
             render :edit
         end
     end

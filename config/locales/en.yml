@@ -58,6 +58,30 @@ en:
       department_updated: 'Department was successufully updated'
       department_not_updated: 'Department was not updated'
 
+  seats:
+    index:
+      list_of_seats: 'List of seats'
+      seat_code: 'Seat code'
+      show: 'Show'
+      edit: 'Edit'
+      delete: 'Delete'
+      department: 'Department'
+
+    new:
+      coordinates: 'Coordinates'
+      back_to_list: 'Back to list of seats'
+      save: 'Save'
+      title: 'New seat'
+
+    edit:
+      title: 'Edit seat'
+
+    alerts:
+      seat_saved: 'Seat was successfully saved'
+      seat_not_saved: 'Seat was not saved'
+      seat_updated: 'Seat was successfully updated'
+      seat_not_updated: 'Seat was not updated'
+
 
   menu:
     departments: 'Departments'

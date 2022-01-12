@@ -1,16 +1,24 @@
 = form_for @seat do |form|
   .form-group
-    = form.label :name, 'Seat name'
+    = form.label :name, t('seats.index.seat_code')
     = form.text_field :name, class: 'form-control'
 
-  .form-group
-    = form.label :name, 'Department'
-    = form.collection_select :department_id, Department.order(:name), :id, :name
+  %br
 
   .form-group
-    = form.label :name, 'Coordinates'
+    = form.label :name, t('seats.index.department') 
+    %br
+    = form.collection_select :department_id, Department.order(:name), :id, :name
+  
+  %br
+
+  .form-group
+    = form.label :name, t('seats.new.coordinates')
     = form.text_field :coordinates, class: 'form-control'
 
-  = form.submit
+  %br
 
-%a.btn.btn-default{ href: seats_path }= 'Back to list'
+  = form.submit t('seats.new.save')
+%br
+
+%a.btn.btn-default{ href: seats_path }= t('seats.new.back_to_list')
