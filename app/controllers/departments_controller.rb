@@ -37,7 +37,7 @@ class DepartmentsController < ApplicationController
     private
 
     def strong_params
-        params.require(:department).permit(:name)
+        params.require(:department).permit(:name, :code)
     end
 
     def set_department
