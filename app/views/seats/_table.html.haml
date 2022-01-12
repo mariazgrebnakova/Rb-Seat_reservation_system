@@ -10,7 +10,7 @@
                 %td= seat.name
                 %td= seat.department.name if seat.department_id.present?
                 %td
-                    %a{ href: seat_path(seat), target:'_blank', class: 'btn btn-info' }= t('seats.index.show')
+                    %a{ href: seat_path(seat), class: 'btn btn-info' }= t('seats.index.show')
                 %td
                     %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
                 %td

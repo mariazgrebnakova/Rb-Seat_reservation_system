@@ -122,6 +122,7 @@ en:
       user: 'User'
       seat: 'Seat'
       created_at: 'Created at'
+      back_to_list: 'Back to list of reservations'
 
     edit:
       edit_reservation: 'Edit reservation'

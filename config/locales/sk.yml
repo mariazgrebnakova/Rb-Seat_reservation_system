@@ -123,6 +123,7 @@ sk:
       user: 'Používateľ'
       seat: 'Miesto'
       created_at: 'Dátum vytvorenia'
+      back_to_list: 'Späť na zoznam rezervácií'
 
     edit:
       edit_reservation: 'Upraviť rezerváciu'

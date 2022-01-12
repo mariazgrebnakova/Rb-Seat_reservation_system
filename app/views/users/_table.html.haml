@@ -18,7 +18,7 @@
                 %td= user.email
                 %td= user.department.name if user.department_id.present?
                 %td
-                    %a{ href: user_path(user), target:'_blank', class: 'btn btn-info' }= t('users.index.detail')
+                    %a{ href: user_path(user), class: 'btn btn-info' }= t('users.index.detail')
                 - if can?(:delete, current_user)
                     %td
                         = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'

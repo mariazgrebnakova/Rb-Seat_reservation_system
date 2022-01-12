@@ -12,7 +12,7 @@
                 %td= department.name
                 %td= department.code
                 %td
-                    %a{ href: department_path(department), target:'_blank', class:'btn btn-info' }= t('departments.index.detail')
+                    %a{ href: department_path(department), class:'btn btn-info' }= t('departments.index.detail')
                 %td
                     %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
                 %td
