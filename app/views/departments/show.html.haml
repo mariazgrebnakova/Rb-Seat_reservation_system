@@ -1,3 +1,25 @@
-= @department.name
+%h5= "#{t('departments.index.department_name')}: #{@department.name}"
 
-%a.btn.btn-default{ href: departments_path }= 'Back to list'
+%br
+
+%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+  %tbody
+    %tr
+      %td= t('departments.index.department_name')
+      %td= @department.name
+
+    %tr
+      %td= t('departments.index.department_code')
+      %td= @department.code
+
+    %tr
+      %td= t('departments.show.users_count')
+      %td= @department.users.count
+
+    %tr
+      %td= t('departments.show.seats_count')
+      %td= @department.seats.count
+
+%br
+
+%a.btn.btn-primary{ href: departments_path }= 'Back to list'

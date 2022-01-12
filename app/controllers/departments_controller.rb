@@ -13,18 +13,18 @@ class DepartmentsController < ApplicationController
         @department = Department.new(strong_params)
 
         if @department.save
-            redirect_to departments_url, flash: { success: 'Department saved...'}
+            redirect_to departments_url, flash: { success: t('departments.alerts.department_saved')}
         else
-            flash[:danger] = 'Department not saved...'
+            flash[:danger] = t('departments.alerts.department_not_saved')
             render :new
         end
     end
 
     def update
         if @department.update(strong_params)
-            redirect_to department_url(@department), flash: { success: 'Department updated...'}
+            redirect_to department_url(@department), flash: { success: t('departments.alerts.department_updated')}
         else
-            flash[:danger] = 'Department not updated...'
+            flash[:danger] = t('departments.alerts.department_not_updated')
             render :edit
         end
     end

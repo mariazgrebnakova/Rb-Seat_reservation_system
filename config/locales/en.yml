@@ -18,10 +18,46 @@ en:
 
     show:
       back_to_list: 'Back to list'
+      whole_name: 'Name'
+      email: 'E-mail'
+      is_user_discarded: 'Is user deactivated'
+      department: 'Oddelenie'
+      last_sign_in: 'Last sign in'
 
     edit:
       edit_user: 'Edit user'
       submit: 'Submit'
+
+  departments:
+    index:
+      list_of_departments: 'List of departments'
+      new_department_button: 'New department'
+      department_name: 'Name'
+      department_code: 'Department code'
+      detail: 'Show'
+      delete: 'Delete'
+      edit: 'Edit'
+
+    new:
+      name: 'Department name'
+      back_to_list: 'Back to list'
+      new_department: 'New department'
+      create_department_button: 'Save'
+      department_code: 'Department code'
+
+    show:
+      users_count: 'Users count'
+      seats_count: 'Seats count'
+
+    edit:
+      title: 'Edit department'
+
+    alerts:
+      department_saved: 'Department was successfully saved'
+      department_not_saved: 'Department was not saved'
+      department_updated: 'Department was successufully updated'
+      department_not_updated: 'Department was not updated'
+
 
   menu:
     departments: 'Departments'

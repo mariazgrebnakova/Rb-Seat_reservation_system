@@ -1,8 +1,15 @@
 = form_for @department do |form|
-    .form-group
-        = form.label :name, 'Department name'
-        = form.text_field :name, class: 'form-control'
+  .form-group
+    = form.label :name, t('departments.new.name')
+    = form.text_field :name, class: 'form-control'
+  %br
+  .form-group
+    = form.label :name, t('departments.new.department_code')
+    = form.text_field :code, class: 'form-control'
 
+  %br
+  = form.submit t('departments.new.create_department_button')
 
-    = form.submit
-%a.btn.btn-default{ href: departments_path }= 'Back to list'
+%br
+
+%a.btn.btn-default{ href: departments_path }= t('departments.new.back_to_list')

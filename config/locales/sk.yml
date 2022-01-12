@@ -20,10 +20,45 @@ sk:
 
     show:
       back_to_list: 'Späť na zoznam'
+      whole_name: 'Meno'
+      email: 'E-mail'
+      is_user_discarded: 'Používateľ deaktivovaný'
+      department: 'Oddelenie'
+      last_sign_in: 'Naposledy prihlásený'
       
     edit:
       edit_user: 'Zmeniť používateľa'
       submit: 'Odoslať'
+
+  departments:
+    index:
+      list_of_departments: 'Zoznam oddelení'
+      new_department_button: 'Nové oddelenie'
+      department_name: 'Názov oddelenia'
+      department_code: 'Kód oddelenia'
+      detail: 'Zobraziť'
+      delete: 'Vymazať'
+      edit: 'Upraviť'
+
+    new:
+      name: 'Názov oddelenia'
+      back_to_list: 'Späť na zoznam'
+      new_department: 'Nové oddelenie'
+      create_department_button: 'Uložiť'
+      department_code: 'Kód oddelenia'
+
+    show:
+      users_count: 'Počet používateľov'
+      seats_count: 'Počet miest'
+
+    edit:
+      title: 'Upraviť oddelenie'
+
+    alerts:
+      department_saved: 'Oddelenie bolo úspešne uložené'
+      department_not_saved: 'Oddelenie nebolo uložené'
+      department_updated: 'Oddelenie bolo úspešne zmenené'
+      department_not_updated: 'Oddelenie nebolo zmenené'
 
   menu:
     departments: 'Oddelenia'

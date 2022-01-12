@@ -1,16 +1,26 @@
 
-%table{:border => 1}
-    %tbody
+%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+  %tbody
     %tr
-        %td= 'Name'
-        %td= @user.first_name + ' ' + @user.last_name
+      %td= t('users.show.whole_name')
+      %td= @user.first_name + ' ' + @user.last_name
 
     %tr
-        %td= 'Email'
-        %td= @user.email
+      %td= t('users.show.email')
+      %td= @user.email
 
     %tr
-        %td= 'Is discarded'
-        %td= @user.is_discarded
+      %td= t('users.show.department')
+      %td= @user.department.name
+
+    %tr
+      %td= t('users.show.last_sign_in')
+      %td= @user.last_sign_in_at.getlocal
+
+    %tr
+      %td= t('users.show.is_user_discarded')
+      %td= @user.is_discarded
+
+%br
 
 %a.btn.btn-primary{ href: users_path}= t('users.show.back_to_list')

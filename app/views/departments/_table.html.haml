@@ -1,8 +1,8 @@
 %table.table.table-bordered
     %thead
         %tr
-            %th= 'Department'
-            %th= 'Whole name'
+            %th= t('departments.index.department_name')
+            %th= t('departments.index.department_code')
             %th
             %th
             %th
@@ -10,10 +10,10 @@
         - @departments.each do |department|
             %tr
                 %td= department.name
-                %td= department_name(department.name)
+                %td= department.code
                 %td
-                    %a{ href: department_path(department), target:'_blank', class:'btn btn-info' }= 'Detail'
+                    %a{ href: department_path(department), target:'_blank', class:'btn btn-info' }= t('departments.index.detail')
                 %td
-                    %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= 'Delete'
+                    %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
                 %td
-                    %a{ href: edit_department_path(department),  class:'btn btn-success'}= 'Edit'
+                    %a{ href: edit_department_path(department),  class:'btn btn-success'}= t('departments.index.edit')
