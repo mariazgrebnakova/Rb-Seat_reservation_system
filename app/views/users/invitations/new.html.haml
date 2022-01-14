@@ -18,6 +18,9 @@
       = f.label :department_id
       %br/
       = f.collection_select :department_id, Department.order(:name), :id, :name
+    
+    .field
+      = f.hidden_field :user_type_id, value: 2
 
   .actions
     = f.submit t("devise.invitations.new.submit_button")

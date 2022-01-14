@@ -27,6 +27,8 @@ sk:
       department: 'Oddelenie'
       last_sign_in: 'Naposledy prihlásený'
       type: 'Typ používateľa'
+      invitation_sent: 'Pozvánka odoslaná'
+      invitation_accepted: 'Pozvánka prijatá'
       
     edit:
       edit_user: 'Zmeniť používateľa'

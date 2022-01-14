@@ -25,6 +25,8 @@ en:
       department: 'Oddelenie'
       last_sign_in: 'Last sign in'
       type: "User type"
+      invitation_sent: "Invitation sent at"
+      invitation_accepted: 'Invitation accepted at'
 
     edit:
       edit_user: 'Edit user'

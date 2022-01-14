@@ -25,6 +25,14 @@
       %td= t('users.show.is_user_discarded')
       %td= @user&.is_discarded
 
+    %tr
+      %td= t('users.show.invitation_sent')
+      %td= @user&.invitation_sent_at&.getlocal
+
+    %tr
+      %td= t('users.show.invitation_accepted')
+      %td= @user&.invitation_accepted_at&.getlocal
+
 %br
 
 %a.btn.btn-primary{ href: users_path}= t('users.show.back_to_list')
