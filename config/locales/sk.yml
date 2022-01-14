@@ -30,6 +30,29 @@ sk:
       edit_user: 'Zmeniť používateľa'
       submit: 'Odoslať'
 
+  devise:
+    log_in:
+      log_in_button: 'Prihlásiť'
+      log_in_title: 'Prihlásenie'
+
+    links:
+      log_in: 'Prihlásiť'
+      sign_up: 'Zaregistrovať sa'
+      forgot_your_password: 'Zabudol si heslo?'
+      confirmation_instruction_not_received: 'Nedostal si inštrukcie k potvrdeniu konta?'
+      unlock_instruction_not_received: 'Nedostal si inštrukcie k odblokovaniu konta?'
+
+    unlocks:
+      resend_unlock_instrction: "Znovu odoslať inštrukcie k odblokovaniu konta"
+
+    confirmations:
+      resend_confirmation_instructions: "Znovu odoslať inštrukcie k potvrdeniu konta"
+
+    mailer:
+      confirm_account: "Potvrdiť konto"
+      welcome: "Vitaj %email !"
+      confirm_through_link_below: "Kliknutím na odkaz nižšie prosím potvrď svoju emailovú adresu:"
+
   departments:
     index:
       list_of_departments: 'Zoznam oddelení'

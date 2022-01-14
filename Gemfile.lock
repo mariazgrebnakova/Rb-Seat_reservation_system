@@ -94,6 +94,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.1)
+      devise (>= 4.8.0)
     devise_invitable (2.0.6)
       actionmailer (>= 5.0)
       devise (>= 4.6)
@@ -279,6 +281,7 @@ DEPENDENCIES
   cancancan
   capybara (>= 3.26)
   devise
+  devise-i18n
   devise_invitable (~> 2.0.0)
   discard
   dotenv-rails

@@ -28,6 +28,30 @@ en:
       edit_user: 'Edit user'
       submit: 'Submit'
 
+  devise:
+    log_in:
+      log_in_button: 'Log in'
+      log_in_title: 'Log in'
+
+    links:
+      log_in:'Log in'
+      sign_up:'Sign up'
+      forgot_your_password:'Forgot your password?'
+      confirmation_instruction_not_received:'Didn't receive confirmation instructions?'
+      unlock_instruction_not_received:'Didn't receive unlock instructions?'
+
+    unlocks:
+      resend_unlock_instrction: "Resend unlock instructions"
+
+    confirmations:
+      resend_confirmation_instructions: "Resend confirmation instructions"
+
+    mailer:
+      confirm_account: "Confirm my account"
+      welcome: "Welcome %email !"
+      confirm_through_link_below: "You can confirm your account email through the link below:"
+      
+
   departments:
     index:
       list_of_departments: 'List of departments'
