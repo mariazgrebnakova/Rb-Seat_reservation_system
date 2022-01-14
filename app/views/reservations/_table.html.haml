@@ -1,3 +1,8 @@
+.row
+    .col-6= paginate @reservations
+    .col-6
+        %div{ style: 'float: right;' }= page_entries_info @reservations
+
 %table.table.table-bordered.table-primary.table-striped.table-center
     %thead.table-dark
         %tr
@@ -28,3 +33,7 @@
                     - if reservation.user_id == current_user.id
                         %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
 
+.row
+    .col-6= paginate @reservations
+    .col-6
+        %div{ style: 'float: right;' }= page_entries_info @reservations

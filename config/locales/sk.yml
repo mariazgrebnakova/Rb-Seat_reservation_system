@@ -172,4 +172,24 @@ sk:
       more_reservations_by_user: 'Vybraný používateľ už má v rozmedzí daného dátumu jednu alebo viac rezervácií'
       seat_is_taken: 'Vybrané miesto nie je už pre jeden alebo viacero z vybraných dní obsadené'
 
+  views:
+    pagination:
+      first: "&laquo; Prvá"
+      last: "Posledná &raquo;"
+      previous: "&lsaquo; Predchádzajúca"
+      next: "Ďalšia &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Žiaden záznam pre %{entry_name} "
+          one: "Zobrazuje sa <b>1</b> záznam pre: %{entry_name}"
+          two: "Zobrazujú sa <b>1</b> záznamy pre: %{entry_name}"
+          three: "Zobrazujú sa <b>1</b> záznamy pre: %{entry_name}"
+          other: "Zobrazuje sa <b> %{count}</b> záznamov pre: %{entry_name}"
+      more_pages:
+        display_entries: "Počet záznamov pre %{entry_name}: <b>%{first}&nbsp;-&nbsp;%{last}</b> z <b>%{total}</b> celkom"
+
+
 

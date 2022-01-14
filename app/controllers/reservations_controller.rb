@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
 
 
     def index
-        @reservations = Reservation.all
+        @reservations = Reservation.all.page(params[:page])
     end
     
     def new
