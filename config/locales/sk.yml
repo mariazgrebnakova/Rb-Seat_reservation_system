@@ -50,8 +50,22 @@ sk:
 
     mailer:
       confirm_account: "Potvrdiť konto"
-      welcome: "Vitaj %email !"
+      welcome: "Vitaj %{email} !"
       confirm_through_link_below: "Kliknutím na odkaz nižšie prosím potvrď svoju emailovú adresu:"
+      hello: "Ahoj %{email} !"
+      reset_introduction: "Niekto vyžiadal link na zmenu hesla k Tvoju kontu. Môžeš tak urobiť kliknutím na link nižšie."
+      change_password_button: "Zmeniť heslo"
+      ignore_if_not_you: "Ak si link na zmenu hesla nevyžiadal Ty, prosím ignoruj tento email"
+      password_wont_change_sooner: "Heslo nebude zmenené až pokým neklikneš na link vyššie a nevytvoríš si nové heslo."
+
+    password:
+      forgot_password_title: "Zabudnuté heslo"
+      send_reset_instructions_button: "Odoslať inštrukcie k obnove hesla"
+      change_password_title: "Zmena hesla"
+      new_password: "Nové heslo"
+      new_password_confirm: "Potvrdenie nového hesla"
+      change_password_button: "Zmeniť heslo"
+      minimum_characters_count: "(Najmenej %{minimum_password_length} znakov)"
 
   departments:
     index:

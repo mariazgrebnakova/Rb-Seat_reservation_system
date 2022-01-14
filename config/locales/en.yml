@@ -48,9 +48,22 @@ en:
 
     mailer:
       confirm_account: "Confirm my account"
-      welcome: "Welcome %email !"
+      welcome: "Welcome %{email} !"
       confirm_through_link_below: "You can confirm your account email through the link below:"
-      
+      hello: "Hello %{email} !"
+      reset_introduction: "Someone has requested a link to change your password. You can do this through the link below."
+      change_password_button: "Change my password"
+      ignore_if_not_you: "If you didn't request this, please ignore this email."
+      password_wont_change_sooner: "Your password won't change until you access the link above and create a new one."
+
+    password: 
+      forgot_password_title: "Forgot your password?"
+      send_reset_instructions_button: "Send me reset password instructions"    
+      change_password_title: "Change your password"
+      new_password: "New password"
+      new_password_confirm: "Confirm new password"
+      change_password_button: "Change my password"
+      minimum_characters_count: "(%{minimum_password_length} characters minimum)"
 
   departments:
     index:
