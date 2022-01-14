@@ -14,12 +14,16 @@
       %td= @user.department.name
 
     %tr
+      %td= t('users.show.type')
+      %td= @user.user_type.name
+
+    %tr
       %td= t('users.show.last_sign_in')
-      %td= @user.last_sign_in_at.getlocal
+      %td= @user&.last_sign_in_at&.getlocal
 
     %tr
       %td= t('users.show.is_user_discarded')
-      %td= @user.is_discarded
+      %td= @user&.is_discarded
 
 %br
 

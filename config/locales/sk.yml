@@ -17,6 +17,7 @@ sk:
       edit: 'Zmeniť'
       new_user: 'Nový používateľ'
       confirm_delete: 'Chcete naozaj vymazať používateľa?'
+      type: 'Typ používateľa'
 
     show:
       back_to_list: 'Späť na zoznam'
@@ -25,6 +26,7 @@ sk:
       is_user_discarded: 'Používateľ deaktivovaný'
       department: 'Oddelenie'
       last_sign_in: 'Naposledy prihlásený'
+      type: 'Typ používateľa'
       
     edit:
       edit_user: 'Zmeniť používateľa'

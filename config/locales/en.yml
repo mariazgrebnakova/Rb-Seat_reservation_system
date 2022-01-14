@@ -15,6 +15,7 @@ en:
       edit: 'Edit'
       new_user: 'New user'
       confirm_delete: 'Do you want to delete user?'
+      type: "User type"
 
     show:
       back_to_list: 'Back to list'
@@ -23,6 +24,7 @@ en:
       is_user_discarded: 'Is user deactivated'
       department: 'Oddelenie'
       last_sign_in: 'Last sign in'
+      type: "User type"
 
     edit:
       edit_user: 'Edit user'

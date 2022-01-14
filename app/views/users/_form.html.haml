@@ -2,12 +2,24 @@
     .form-group
         = form.label :name, t('users.index.first_name')
         = form.text_field :first_name, class: 'form-control'
+    %br
+    .form-group
         = form.label :name, t('users.index.last_name')
         = form.text_field :last_name, class: 'form-control'
+    %br
+    .form-group
         = form.label :name, t('users.index.email')
         = form.text_field :email, class: 'form-control'
+    %br
+    .form-group
         = form.label :name, t('users.index.department')
+        %br
         = form.collection_select :department_id, Department.order(:name), :id, :name
-        
+    %br
+    .form-group
+        = form.label :name, t('users.index.type')
+        %br
+        = form.collection_select :user_type_id, UserType.order(:name), :id, :name
+    %br
     = form.submit value: t('users.edit.submit')
 %a.btn.btn-default{ href: users_path }= t('users.show.back_to_list')
