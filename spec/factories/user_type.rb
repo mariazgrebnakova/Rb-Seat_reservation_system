@@ -2,16 +2,9 @@ FactoryBot.define do
   factory :user_type, class: UserType do
     name { 'User' }
 
-    trait :name do
-      name {'Administrator'}
+    trait UserType.all.each do |k|
+      name {k['name']}
     end
 
-    trait :name do
-      name {'Host'}
-    end
-
-    trait :name do
-      name {'Manager'}
-    end
   end
 end
