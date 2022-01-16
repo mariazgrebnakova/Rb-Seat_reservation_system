@@ -2,6 +2,9 @@ class Seat < ApplicationRecord
     belongs_to :department
     has_many :reservations
 
+    validates :name, presence: true, uniqueness: { case_sensitive: false }
+    validates :coordinates, presence: true, uniqueness: { case_sensitive: false }
+
     def seat_color
         if is_seat_empty == true
             return "{fillColor:'3CB371'}"
