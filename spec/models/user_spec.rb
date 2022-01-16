@@ -18,4 +18,9 @@ RSpec.describe User, type: :model do
     it { should belong_to(:user_type) }
   end
 
+  describe 'full_name' do
+    it 'returns first_name space last_name' do
+      expect(described_class.full_name).to output("#{first_name} #{last_name}")
+    end
+  end
 end
