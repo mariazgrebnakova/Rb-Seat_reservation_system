@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "@popperjs/core"
+import "chartkick/chart.js"
 
 require("bootstrap/dist/js/bootstrap")
 require('jquery')
