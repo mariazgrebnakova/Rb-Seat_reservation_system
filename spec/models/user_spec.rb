@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let!(:user) { create(:user) }
+  let!(:user) { create(:user, first_name: 'Hubert', last_name:'Sampansky')}
 
   describe 'uniqueness' do
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
@@ -19,8 +19,8 @@ RSpec.describe User, type: :model do
   end
 
   describe 'full_name' do
-    it 'returns first_name space last_name' do
-      expect(described_class.full_name).to output("#{first_name} #{last_name}")
+    it 'returns first_name space last_name' do     
+      expect(user.full_name).to eq("Hubert Sampansky")
     end
   end
 end
