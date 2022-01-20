@@ -1,5 +1,5 @@
-%table.table.table-bordered.table-primary.table-striped.table-center
-    %thead.table-dark
+%table.table.table-primary.table-center.index_table
+    %thead
         %tr
             %th= t('users.index.first_name')
             %th= t('users.index.last_name')
@@ -18,10 +18,10 @@
                 %td= user.email
                 %td= user.department.name if user.department_id.present?
                 %td
-                    %a{ href: user_path(user), class: 'btn btn-info' }= t('users.index.detail')
+                    %a.index_button_show{ href: user_path(user), class: 'btn' }= t('users.index.detail')
                 - if can?(:delete, current_user)
                     %td
                         = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'
                 - if can?(:edit, current_user)
                     %td
-                        %a{ href: edit_user_path(user), class:'btn btn-success'}= t('users.index.edit')
+                        %a.index_button_edit{ href: edit_user_path(user), class:'btn'}= t('users.index.edit')

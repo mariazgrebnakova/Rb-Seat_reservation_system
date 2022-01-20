@@ -15,3 +15,65 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    background-color: whitesmoke;
+  }
+
+ label{
+     font-weight: bold;
+ }
+
+ td {
+    padding-left: 15px;
+ }
+
+.table_headlines {
+    font-size: 40px;
+    color: black;
+}
+
+.index_table > :not(:first-child) {
+    border-top: none;
+}
+
+.index_table th{
+    background-color: #e27d60;
+}
+
+.index_table td{
+    background-color: whitesmoke;
+}
+
+.index_table tr:hover td{
+    background-color: rgb(215, 220, 223);
+}
+
+.index_button_show{
+    background-color: #83b3e0;
+}
+
+.index_button_edit{
+    background-color: #41B3A3;
+}
+
+.index_button_new{
+    float: right;
+    background-color: #c38d9e;
+}
+
+.detail_table{
+    width: 50%;
+}
+
+.detail_table td{
+    background-color: whitesmoke;
+}
+
+.detail_table td:first-child{
+    font-weight: bold;
+}
+
+.back_button{
+    background-color: #83b3e0;
+}

@@ -1,6 +1,8 @@
+%p.table_headlines= "#{t('users.show.headline')}:  #{@user.full_name}"
 
-%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+%table.table.table-primary.detail_table
   %tbody
+
     %tr
       %td= t('users.show.whole_name')
       %td= @user.first_name + ' ' + @user.last_name
@@ -35,4 +37,4 @@
 
 %br
 
-%a.btn.btn-primary{ href: users_path}= t('users.show.back_to_list')
+%a.btn.back_button{ href: users_path}= t('users.show.back_to_list')

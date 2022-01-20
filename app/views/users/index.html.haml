@@ -1,5 +1,9 @@
 
-%h1= t('users.index.title')
-= render'table'
+%h1.table_headlines= t('users.index.title')
 
-%a.btn.btn-primary{ href: new_user_invitation_path}= t('users.index.new_user')
+%a.btn.btn-primary.index_button_new{ href: new_user_invitation_path}= t('users.index.new_user')
+
+%br
+%br
+
+= render'table'

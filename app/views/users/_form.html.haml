@@ -14,12 +14,16 @@
     .form-group
         = form.label :name, t('users.index.department')
         %br
-        = form.collection_select :department_id, Department.order(:name), :id, :name
+        = form.select :department_id, options_for_select(Department.all.map{|o| [o.name, o.id] }), {}, { class: 'form-select' }
+
     %br
     .form-group
         = form.label :name, t('users.index.type')
         %br
-        = form.collection_select :user_type_id, UserType.order(:name), :id, :name
+        = form.select :user_type_id, options_for_select(UserType.all.map{|o| [o.name, o.id] }), {}, { class: 'form-select' }
+
     %br
-    = form.submit value: t('users.edit.submit')
-%a.btn.btn-default{ href: users_path }= t('users.show.back_to_list')
+
+    = form.submit value: t('users.edit.submit'), class: 'btn btn-primary'
+
+%a.btn.back_button.mt-5{ href: users_path }= t('users.show.back_to_list')
