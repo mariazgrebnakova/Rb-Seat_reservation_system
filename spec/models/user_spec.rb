@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let!(:user) { create(:user, first_name: 'Hubert', last_name:'Sampansky')}
+  let!(:user) { create(:user, first_name: 'Hubert', last_name:'Sampansky', discarded_at: nil)}
 
   describe 'uniqueness' do
     it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
@@ -18,9 +18,15 @@ RSpec.describe User, type: :model do
     it { should belong_to(:user_type) }
   end
 
-  describe 'full_name' do
+  describe '.full_name' do
     it 'returns first_name space last_name' do     
       expect(user.full_name).to eq("Hubert Sampansky")
+    end
+  end
+
+  describe '.is_discarded' do
+    it 'returns false if not discarded' do
+      expect(user.is_discarded).to eq("false")
     end
   end
 end
