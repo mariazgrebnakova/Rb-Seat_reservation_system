@@ -29,10 +29,11 @@ sk:
       type: 'Typ používateľa'
       invitation_sent: 'Pozvánka odoslaná'
       invitation_accepted: 'Pozvánka prijatá'
+      headline: 'Používateľ'
       
     edit:
       edit_user: 'Zmeniť používateľa'
-      submit: 'Odoslať'
+      submit: 'Uložiť'
 
   devise:
     log_in:

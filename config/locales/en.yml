@@ -27,6 +27,7 @@ en:
       type: "User type"
       invitation_sent: "Invitation sent at"
       invitation_accepted: 'Invitation accepted at'
+      headline: 'User'
 
     edit:
       edit_user: 'Edit user'
