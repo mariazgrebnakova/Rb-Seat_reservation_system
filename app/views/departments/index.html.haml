@@ -1,5 +1,5 @@
+%h1.table_headline= t('departments.index.list_of_departments')
 
-%h1= t('departments.index.list_of_departments')
+%a.btn.index_button_new.mb-3{ href: new_department_path}= t('departments.index.new_department_button')
+
 = render'table'
-
-%a.btn.btn-primary{ href: new_department_path}= t('departments.index.new_department_button')

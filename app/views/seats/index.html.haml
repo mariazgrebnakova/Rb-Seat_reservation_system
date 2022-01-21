@@ -1,4 +1,5 @@
-%h1= t('seats.index.list_of_seats')
-= render'table'
+%h1.table_headline= t('seats.index.list_of_seats')
 
-%a.btn.btn-primary{ href: new_seat_path}= 'New seat'
+%a.btn.index_button_new.mb-3{ href: new_seat_path}= t('seats.index.new_seat_button')
+
+= render'table'

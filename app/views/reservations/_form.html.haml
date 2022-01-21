@@ -2,26 +2,26 @@
   - if @reservation.errors.full_messages.any?
     - @reservation.errors.each do |x|
       = x.type
-      %br
-%br/
-%br/
 
 = form_for @reservation do |form|
-  .form-group
+  .form-group.mt-5
     = form.label :name, t('reservations.form.name')
-    = form.collection_select :user_id, users_for_select, :id, :full_name
+    = form.select :user_id, options_for_select(User.all.map{|o| [o.full_name, o.id] }), {}, { class: 'form-select' }
 
-  .form-group
+
+  .form-group.mt-3
     = form.label :name, t('reservations.form.seat')
-    = form.collection_select :seat_id, seats_for_select.order(:name), :id, :name
+    = form.select :seat_id, options_for_select(Seat.all.map{|o| [o.name, o.id] }), {}, { class: 'form-select' }
 
-  .form-group
+  .form-group.mt-3
     = form.label :name, t('reservations.form.date_from')
     = form.date_field :from, min: Date.today
 
     = form.label :name, t('reservations.form.date_to')
     = form.date_field :to, min: Date.today
 
-  = form.submit value: t('reservations.form.create_reservation')
+  %br
 
-%a.btn.btn-default{ href: reservations_path }= t('users.show.back_to_list')
+  = form.submit value: t('reservations.form.create_reservation'), class: 'btn btn-primary'
+
+%a.btn.back_button.mt-5{ href: reservations_path }= t('users.show.back_to_list')

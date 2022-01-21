@@ -28,8 +28,13 @@
     padding-left: 15px;
  }
 
-.table_headlines {
+.table_headline {
     font-size: 40px;
+    color: black;
+}
+
+.show_headline {
+    font-size: 30px;
     color: black;
 }
 

@@ -8,7 +8,7 @@
   .form-group
     = form.label :name, t('seats.index.department') 
     %br
-    = form.collection_select :department_id, Department.order(:name), :id, :name
+    = form.select :department_id, options_for_select(Department.all.map{|o| [o.name, o.id] }), {}, { class: 'form-select' }
   
   %br
 
@@ -18,7 +18,7 @@
 
   %br
 
-  = form.submit t('seats.new.save')
+  = form.submit t('seats.new.save'), class: 'btn btn-primary'
 %br
 
-%a.btn.btn-default{ href: seats_path }= t('seats.new.back_to_list')
+%a.btn.back_button.mt-5{ href: seats_path }= t('seats.new.back_to_list')

@@ -1,8 +1,6 @@
-%h5= "#{t('seats.index.seat_code')}: #{@seat.name}"
+%h5.show_headline= "#{t('seats.index.seat_code')}: #{@seat.name}"
 
-%br
-
-%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+%table.table.detail_table.mt-5
   %tbody
     %tr
       %td= t('seats.index.seat_code')
@@ -12,6 +10,4 @@
       %td= t('seats.index.department')
       %td= @seat.department.name
 
-%br
-
-%a.btn.btn-default{ href: seats_path }= t('seats.new.back_to_list')
+%a.btn.back_button.mt-3{href: seats_path }= t('seats.new.back_to_list')

@@ -1,39 +1,39 @@
 .row
-    .col-6= paginate @reservations
-    .col-6
-        %div{ style: 'float: right;' }= page_entries_info @reservations
+  .col-6= paginate @reservations
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @reservations
 
-%table.table.table-bordered.table-primary.table-striped.table-center
-    %thead.table-dark
-        %tr
-            %th= t('reservations.table.seat_code')
-            %th= t('reservations.table.reserved_by')
-            %th= t('reservations.form.date_from')
-            %th= t('reservations.form.date_to')
-            %th
-            %th
-            %th
-    %tbody
-        - @reservations.each do |reservation|
-            %tr
-                %td= reservation.seat&.name 
-                %td= "#{reservation.user&.first_name} #{reservation.user&.last_name}"
-                %td= reservation.from
-                %td= reservation.to
-                %td
-                    %a{ href: reservation_path(reservation), class: 'btn btn-info' }= t('reservations.table.detail')
-                %td
-                    - if current_user.is_admin?
-                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
-                    - if reservation.user_id == current_user.id
-                        %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
-                %td
-                    - if current_user.is_admin?
-                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
-                    - if reservation.user_id == current_user.id
-                        %a{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
+%table.table.table-primary.table-center.index_table
+  %thead
+    %tr
+      %th= t('reservations.table.seat_code')
+      %th= t('reservations.table.reserved_by')
+      %th= t('reservations.form.date_from')
+      %th= t('reservations.form.date_to')
+      %th
+      %th
+      %th
+  %tbody
+    - @reservations.each do |reservation|
+      %tr
+        %td= reservation.seat&.name 
+        %td= "#{reservation.user&.first_name} #{reservation.user&.last_name}"
+        %td= reservation.from
+        %td= reservation.to
+        %td
+          %a.index_button_show{ href: reservation_path(reservation), class: 'btn' }= t('reservations.table.detail')
+        %td
+          - if current_user.is_admin?
+            %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
+          - if current_user.is_admin? == false && reservation.user_id == current_user.id
+            %a{ href: reservation_path(reservation), data: { method: :delete }, class:'btn btn-danger'}= t('reservations.table.delete')
+        %td
+          - if current_user.is_admin?
+            %a.index_button_edit{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
+          - if current_user.is_admin? == false && reservation.user_id == current_user.id
+            %a.index_button_edit{ href: edit_reservation_path(reservation), class:'btn btn-success'}= t('reservations.table.edit')
 
 .row
-    .col-6= paginate @reservations
-    .col-6
-        %div{ style: 'float: right;' }= page_entries_info @reservations
+  .col-6= paginate @reservations
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @reservations

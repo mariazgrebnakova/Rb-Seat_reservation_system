@@ -84,7 +84,7 @@ sk:
 
     new:
       name: 'Názov oddelenia'
-      back_to_list: 'Späť na zoznam'
+      back_to_list: 'Späť na zoznam oddelení'
       new_department: 'Nové oddelenie'
       create_department_button: 'Uložiť'
       department_code: 'Kód oddelenia'
@@ -110,6 +110,7 @@ sk:
       edit: 'Upraviť'
       delete: 'Vymazať'
       department: 'Oddelenie'
+      new_seat_button: 'Nové miesto'
 
     new:
       coordinates: 'Súradnice'

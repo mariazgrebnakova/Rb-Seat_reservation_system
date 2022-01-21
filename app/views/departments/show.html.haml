@@ -1,8 +1,6 @@
-%h5= "#{t('departments.index.department_name')}: #{@department.name}"
+%h5.show_headline= "#{t('departments.index.department_name')}: #{@department.name}"
 
-%br
-
-%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+%table.table.detail_table.mt-5
   %tbody
     %tr
       %td= t('departments.index.department_name')
@@ -22,4 +20,4 @@
 
 %br
 
-%a.btn.btn-primary{ href: departments_path }= 'Back to list'
+%a.btn.back_button.mt-5{ href: departments_path }= t('departments.new.back_to_list')

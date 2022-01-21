@@ -82,7 +82,7 @@ en:
 
     new:
       name: 'Department name'
-      back_to_list: 'Back to list'
+      back_to_list: 'Back to department list'
       new_department: 'New department'
       create_department_button: 'Save'
       department_code: 'Department code'
@@ -108,6 +108,7 @@ en:
       edit: 'Edit'
       delete: 'Delete'
       department: 'Department'
+      new_seat_button: 'New seat'
 
     new:
       coordinates: 'Coordinates'

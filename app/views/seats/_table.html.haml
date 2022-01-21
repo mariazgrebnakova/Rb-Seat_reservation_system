@@ -1,17 +1,19 @@
-%table.table.table-bordered.table-primary.table-striped.table-center
-    %thead.table-dark
-        %tr
-            %th= t('seats.index.seat_code')
-            %th= t('seats.index.department')
-            %th
+%table.table.table-primary.index_table
+  %thead
+    %tr
+      %th= t('seats.index.seat_code')
+      %th= t('seats.index.department')
+      %th
+      %th
+      %th
     %tbody
-        - @seats.each do |seat|
-            %tr
-                %td= seat.name
-                %td= seat.department.name if seat.department_id.present?
-                %td
-                    %a{ href: seat_path(seat), class: 'btn btn-info' }= t('seats.index.show')
-                %td
-                    %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
-                %td
-                    %a{ href: edit_seat_path(seat), class:'btn btn-success'}= t('seats.index.edit')
+      - @seats.each do |seat|
+        %tr
+          %td= seat.name
+          %td= seat.department.name if seat.department_id.present?
+          %td
+            %a.index_button_show{ href: seat_path(seat), class: 'btn' }= t('seats.index.show')
+          %td
+            %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
+          %td
+            %a.index_button_edit{ href: edit_seat_path(seat), class:'btn'}= t('seats.index.edit')

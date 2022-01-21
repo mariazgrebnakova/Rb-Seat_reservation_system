@@ -1,19 +1,18 @@
-%table.table.table-bordered
-    %thead
-        %tr
-            %th= t('departments.index.department_name')
-            %th= t('departments.index.department_code')
-            %th
-            %th
-            %th
-    %tbody
-        - @departments.each do |department|
-            %tr
-                %td= department.name
-                %td= department.code
-                %td
-                    %a{ href: department_path(department), class:'btn btn-info' }= t('departments.index.detail')
-                %td
-                    %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
-                %td
-                    %a{ href: edit_department_path(department),  class:'btn btn-success'}= t('departments.index.edit')
+%table.table.table-primary.table-center.index_table 
+  %tr
+    %th= t('departments.index.department_name')
+    %th= t('departments.index.department_code')
+    %th
+    %th
+    %th
+  %tbody
+    - @departments.each do |department|
+      %tr
+      %td= department.name
+      %td= department.code
+      %td
+        %a.index_button_show{ href: department_path(department), class:'btn' }= t('departments.index.detail')
+      %td
+        %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
+      %td
+        %a.index_button_edit{ href: edit_department_path(department),  class:'btn'}= t('departments.index.edit')

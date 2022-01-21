@@ -8,8 +8,8 @@
     = form.text_field :code, class: 'form-control'
 
   %br
-  = form.submit t('departments.new.create_department_button')
+  = form.submit t('departments.new.create_department_button'), class: 'btn btn-primary'
 
 %br
 
-%a.btn.btn-default{ href: departments_path }= t('departments.new.back_to_list')
+%a.btn.back_button.mt-5{ href: departments_path }= t('departments.new.back_to_list')

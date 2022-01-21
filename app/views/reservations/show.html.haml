@@ -1,8 +1,6 @@
-%h5= "#{t('reservations.show.reservation_id')}: #{@reservation.id}"
+%h5.show_headline= "#{t('reservations.show.reservation_id')}: #{@reservation.id}"
 
-%br
-
-%table{:width=>"50%",:border=>"1", :cellpadding=>'5px'}
+%table.table.detail_table.mt-5
   %tbody
     %tr
       %td= t('reservations.show.reservation_id')
@@ -32,6 +30,4 @@
       %td= t('reservations.show.created_at')
       %td= @reservation.created_at.getlocal
 
-%br
-
-%a.btn.btn-default{ href: reservations_path }= t('reservations.show.back_to_list')
+%a.btn.back_button.mt-5{ href: reservations_path }= t('reservations.show.back_to_list')
