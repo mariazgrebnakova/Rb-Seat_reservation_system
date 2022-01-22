@@ -1,3 +1,8 @@
+.row
+  .col-6= paginate @seats
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @seats
+
 %table.table.table-primary.index_table
   %thead
     %tr
@@ -17,3 +22,8 @@
             %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
           %td
             %a.index_button_edit{ href: edit_seat_path(seat), class:'btn'}= t('seats.index.edit')
+
+.row
+  .col-6= paginate @seats
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @seats

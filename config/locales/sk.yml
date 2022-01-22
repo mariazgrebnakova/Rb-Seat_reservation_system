@@ -189,13 +189,13 @@ sk:
     page_entries_info:
       one_page:
         display_entries:
-          zero: "Žiaden záznam pre %{entry_name} "
-          one: "Zobrazuje sa <b>1</b> záznam pre: %{entry_name}"
-          two: "Zobrazujú sa <b>1</b> záznamy pre: %{entry_name}"
-          three: "Zobrazujú sa <b>1</b> záznamy pre: %{entry_name}"
-          other: "Zobrazuje sa <b> %{count}</b> záznamov pre: %{entry_name}"
+          zero: "Žiaden záznam"
+          one: "Zobrazuje sa <b>1</b> záznam"
+          two: "Zobrazujú sa <b>1</b> záznamy"
+          three: "Zobrazujú sa <b>1</b> záznamy"
+          other: "Zobrazuje sa <b> %{count}</b> záznamov"
       more_pages:
-        display_entries: "Počet záznamov pre %{entry_name}: <b>%{first}&nbsp;-&nbsp;%{last}</b> z <b>%{total}</b> celkom"
+        display_entries: "Počet záznamov <b>%{first}&nbsp;-&nbsp;%{last}</b> z <b>%{total}</b> celkom"
 
 
 

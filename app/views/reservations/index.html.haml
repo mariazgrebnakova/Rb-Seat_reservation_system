@@ -3,6 +3,8 @@
 .alert.alert-info
   = link_to t('reservations.map.show_on_map'), map_reservations_path
 
-%a.btn.index_button_new.mb-3{ href: new_reservation_path}= t('reservations.index.new_reservation')
+.row
+  %div{class: 'float-right'}
+    %a.btn.index_button_new.mb-3{ href: new_reservation_path}= t('reservations.index.new_reservation')
 
 = render'table'

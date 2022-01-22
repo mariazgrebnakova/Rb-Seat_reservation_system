@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     #authorize_resource
 
     def index
-        @users = User.all
+        @users = User.all.page(params[:page])
     end
     
     def new

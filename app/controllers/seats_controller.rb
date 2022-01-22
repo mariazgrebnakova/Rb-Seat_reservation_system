@@ -2,7 +2,7 @@ class SeatsController < ApplicationController
     before_action :set_seat, only: [:show, :destroy, :edit, :update]
     
     def index
-        @seats = Seat.all
+        @seats = Seat.all.page(params[:page])
     end
     
     def new

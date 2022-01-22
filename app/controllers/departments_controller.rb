@@ -2,7 +2,7 @@ class DepartmentsController < ApplicationController
     before_action :set_department, only: [:show, :destroy, :edit, :update]
 
     def index
-        @departments = Department.all
+        @departments = Department.all.page(params[:page])
     end
 
     def new

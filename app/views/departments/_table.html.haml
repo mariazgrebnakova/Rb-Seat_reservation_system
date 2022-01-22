@@ -1,3 +1,8 @@
+.row
+  .col-6= paginate @departments
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @departments
+
 %table.table.table-primary.table-center.index_table 
   %tr
     %th= t('departments.index.department_name')
@@ -16,3 +21,8 @@
         %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
       %td
         %a.index_button_edit{ href: edit_department_path(department),  class:'btn'}= t('departments.index.edit')
+
+.row
+  .col-6= paginate @departments
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @departments
