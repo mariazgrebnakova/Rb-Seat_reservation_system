@@ -18,3 +18,28 @@ require('packs/jquery.maphilight.metadata')
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$(function () {
+    $('.map').maphilight({
+        /*fillColor: '880808',*/
+        alwaysOn: true
+    });
+
+    // Na elemente `area` pod elementom `map` pocuvam na `click` event
+    $('map area').click(function () {
+        let seat_id = $(this).data('id')
+
+        $('[name=seat_id]').val(seat_id)
+
+        var data = $(this).data('maphilight') || {};
+        if (!jQuery.isEmptyObject(data)) {
+            data = {}
+        } else {
+            data.fillColor = '00ffff'; // svetlomodra
+        }
+
+        // This sets the new data, and finally checks for areas with alwaysOn set
+        $('map area').data('maphilight', {}).trigger('alwaysOn.maphilight');
+        $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
+    })
+});

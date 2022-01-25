@@ -18,23 +18,6 @@
 
   = image_tag("test_map", alt: "test_map", usemap:"#image-map", class: "map" )
 
-  :javascript
-    // TODO: Presunut do suboru application.js
-
-    $(function() {
-      $('.map').maphilight({
-        /*fillColor: '880808',*/
-        alwaysOn: true
-      });
-
-      // Na elemente `area` pod elementom `map` pocuvam na `click` event
-      $('map area').click(function() {
-        seat_id = $(this).data('id')
-
-        $('[name=seat_id]').val(seat_id)
-      })
-    });
-
   %map.image-map{ name: 'image-map' }
     - @seats.each do |seat|
       - color = @reservations_by_seat.key?(seat.id) ? 'FA8072' : '3CB371' # FA8072 = red, 3CB371 = green
