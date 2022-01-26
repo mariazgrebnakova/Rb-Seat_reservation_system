@@ -16,13 +16,13 @@
 
   = hidden_field_tag :seat_id, params[:seat_id]
 
-  = image_tag("test_map", alt: "test_map", usemap:"#image-map", class: "map" )
+  = image_tag("floor_map120", alt: "floor_map120", usemap:"#image-map", class: "map" )
 
   %map.image-map{ name: 'image-map' }
     - @seats.each do |seat|
       - color = @reservations_by_seat.key?(seat.id) ? 'FA8072' : '3CB371' # FA8072 = red, 3CB371 = green
 
-      %area{ alt: seat.name, coords: seat.coordinates, shape: 'rect', title: seat.name, class: "{fillColor:'#{color}'}'", data: { id: seat.id } }
+      %area{ alt: seat.name, coords: seat.coordinates, shape: seat.shape, title: seat.name, class: "{fillColor:'#{color}'}", data: { id: seat.id } }
 
   = button_tag name: 'type', value: 'reserve' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
     = t('reservations.map.reserve')

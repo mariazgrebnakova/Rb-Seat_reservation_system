@@ -18,6 +18,12 @@
 
   %br
 
+  .form-group
+    = form.label :name, t('seats.new.shape')
+    = form.select :shape, options_for_select(['rect', 'poly']), {}, { class: 'form-select' }
+
+  %br
+
   = form.submit t('seats.new.save'), class: 'btn btn-primary'
 %br
 
