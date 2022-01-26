@@ -10,4 +10,8 @@
       %td= t('seats.index.department')
       %td= @seat.department.name
 
+    %tr
+      %td= t('seats.index.shape')
+      %td= @seat.shape
+
 %a.btn.back_button.mt-3{href: seats_path }= t('seats.new.back_to_list')

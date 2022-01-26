@@ -109,12 +109,14 @@ en:
       delete: 'Delete'
       department: 'Department'
       new_seat_button: 'New seat'
+      shape: 'Shape'
 
     new:
       coordinates: 'Coordinates'
       back_to_list: 'Back to list of seats'
       save: 'Save'
       title: 'New seat'
+      shape: 'Shape'
 
     edit:
       title: 'Edit seat'

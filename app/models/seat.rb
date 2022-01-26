@@ -4,6 +4,7 @@ class Seat < ApplicationRecord
 
     validates :name, presence: true, uniqueness: { case_sensitive: false }
     validates :coordinates, presence: true, uniqueness: { case_sensitive: false }
+    validates :shape, presence: true
 
     def seat_color
         if is_seat_empty == true

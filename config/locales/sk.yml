@@ -111,12 +111,14 @@ sk:
       delete: 'Vymazať'
       department: 'Oddelenie'
       new_seat_button: 'Nové miesto'
+      shape: 'Tvar miesta'
 
     new:
       coordinates: 'Súradnice'
       back_to_list: 'Späť na zoznam miest'
       save: 'Uložiť'
       title: 'Nové miesto'
+      shape: 'Tvar miesta'
 
     edit:
       title: 'Upraviť miesto'
