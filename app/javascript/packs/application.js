@@ -26,7 +26,7 @@ $(function () {
     });
 
     // Na elemente `area` pod elementom `map` pocuvam na `click` event
-    $('map area').click(function () {
+    $('map area.is_seat_free').click(function () {
         let seat_id = $(this).data('id')
 
         $('[name=seat_id]').val(seat_id)
