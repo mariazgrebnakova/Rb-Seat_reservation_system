@@ -182,4 +182,9 @@ en:
   home:
     index:
       my_reservations: 'My reservations'
+
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+    week: 'Week'
   

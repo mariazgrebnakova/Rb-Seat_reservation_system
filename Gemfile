@@ -74,3 +74,4 @@ gem 'maphilight-rails'
 gem 'business_time'
 gem 'kaminari'
 gem "chartkick"
+gem "simple_calendar", "~> 2.4"

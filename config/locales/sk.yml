@@ -204,5 +204,8 @@ sk:
     index:
       my_reservations: 'Moje rezervácie'
 
-
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+    week: 'Týždeň'
 
