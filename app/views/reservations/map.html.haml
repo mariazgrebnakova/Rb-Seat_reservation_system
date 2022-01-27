@@ -28,5 +28,5 @@
       %area{ alt: seat.name, coords: seat.coordinates, shape: seat.shape, title: seat.name, class: "{fillColor:'#{color}'} #{area_class_name}", data: { id: seat.id } }
 
   .mt-3
-    = button_tag name: 'type', value: 'reserve' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
+    = button_tag name: 'type', id: 'reserve_button', value: 'reserve' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
       = t('reservations.map.reserve')
