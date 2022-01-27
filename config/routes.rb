@@ -5,11 +5,12 @@ Rails.application.routes.draw do
     resources :users
     resources :departments
     resources :seats
+    resources :home , only: [:index]
 
     resources :reservations do
       get :map, on: :collection # https://guides.rubyonrails.org/routing.html#nested-resources
       post :submit_from_map, on: :collection
     end
 
-    root to: 'users#index'
+    root to: 'home#index'
 end

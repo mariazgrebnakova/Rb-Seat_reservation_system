@@ -1,0 +1,17 @@
+%table.table.table-primary.table-center.index_table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+  %tbody
+    - @current_user_reservations.each do |reservation|
+      %tr
+        %td= reservation.seat&.name 
+        %td= reservation.from
+        %td= reservation.to
+        
+.row
+  .col-6= paginate @current_user_reservations
+  .col-6
+    %div{ style: 'float: right;' }= page_entries_info @current_user_reservations

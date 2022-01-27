@@ -195,9 +195,14 @@ sk:
           one: "Zobrazuje sa <b>1</b> záznam"
           two: "Zobrazujú sa <b>1</b> záznamy"
           three: "Zobrazujú sa <b>1</b> záznamy"
+          few: "Počet zobrazených záznamov: <b> %{count}</b>"
           other: "Zobrazuje sa <b> %{count}</b> záznamov"
       more_pages:
         display_entries: "Počet záznamov <b>%{first}&nbsp;-&nbsp;%{last}</b> z <b>%{total}</b> celkom"
+
+  home:
+    index:
+      my_reservations: 'Moje rezervácie'
 
 
 

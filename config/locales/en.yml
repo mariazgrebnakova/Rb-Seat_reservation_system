@@ -179,4 +179,7 @@ en:
       more_reservations_by_user: 'This user has already some reservation for one or more of the chosen dates'
       seat_is_taken: 'The chosen seat is not available at this date range'
 
+  home:
+    index:
+      my_reservations: 'My reservations'
   
