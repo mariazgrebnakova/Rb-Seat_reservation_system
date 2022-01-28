@@ -71,7 +71,7 @@
     width: 50%;
 }
 
-.detail_table td{
+.detail_table td{ 
     background-color: whitesmoke;
 }
 
@@ -79,6 +79,15 @@
     font-weight: bold;
 }
 
-.back_button{
+.back_button {
     background-color: #83b3e0;
+}
+
+.pagination {
+    .page, .next, .last, .prev, .first{
+      padding: 5px;
+    }
+    .current {
+      font-weight: bold;
+    }
 }
