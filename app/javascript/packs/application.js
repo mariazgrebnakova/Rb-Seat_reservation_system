@@ -19,7 +19,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-$(function () {
+$(document).on('turbolinks:load', function() {
     $('.map').maphilight({
         /*fillColor: '880808',*/
         alwaysOn: true

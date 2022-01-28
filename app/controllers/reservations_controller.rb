@@ -57,13 +57,14 @@ class ReservationsController < ApplicationController
               to: params[:to],
               user_id: current_user.id
             )
-
-            return redirect_to map_reservations_url, flash: { success: 'Successfully reserved' } if @reservation.save
+            if @reservation.save
+                return redirect_to map_reservations_url, flash: { success: 'Successfully reserved' } 
+            else
+                return redirect_to map_reservations_url, flash: { danger: "Not reserved: #{@reservation.errors.full_messages.join(' ')}" } 
+            end
         end
 
-        prepare_map
-
-        render :map
+        redirect_to map_reservations_url(to: params[:to], from: params[:from])
     end
     
     private
