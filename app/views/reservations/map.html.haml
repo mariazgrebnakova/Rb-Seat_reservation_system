@@ -11,13 +11,13 @@
   = date_field_tag :from, params[:from], min: Date.today
   = date_field_tag :to, params[:to], min: Date.today
 
-  = button_tag name: nil do
+  = button_tag name: nil, class: 'btn btn-primary' do
     = t('reservations.map.show_seats')
 
   = hidden_field_tag :seat_id, params[:seat_id]
 
   .mt-3
-    = image_tag("floor_map120", alt: "floor_map120", usemap:"#image-map", class: "map" )
+    = image_tag("floor_map120_transparent", alt: "floor_map120", usemap:"#image-map", class: "map" )
 
   %map.image-map{ name: 'image-map' }
     - @seats.each do |seat|
@@ -27,6 +27,6 @@
 
       %area{ alt: seat.name, coords: seat.coordinates, shape: seat.shape, title: seat.name, class: "{fillColor:'#{color}'} #{area_class_name}", data: { id: seat.id } }
 
-  .mt-3
-    = button_tag name: 'type', id: 'reserve_button', value: 'reserve' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
+  .mt-3.btn
+    = button_tag name: 'type', id: 'reserve_button', value: 'reserve', class: 'btn btn-primary' do # Toto ked kliknem, tak v controlleri sa mi to ulozi
       = t('reservations.map.reserve')
