@@ -133,6 +133,7 @@ en:
     seats: 'Seats'
     reservations: 'Reservations'
     users: 'Users'
+    home: 'Home'
   
   reservations:
     form:

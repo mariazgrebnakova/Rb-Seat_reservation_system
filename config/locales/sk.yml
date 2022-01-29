@@ -134,6 +134,7 @@ sk:
     seats: 'Stoly'
     reservations: 'Rezervácie'
     users: 'Používatelia'
+    home: 'Domov'
 
   reservations:
     form:

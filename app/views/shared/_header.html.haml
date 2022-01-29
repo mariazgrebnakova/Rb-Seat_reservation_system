@@ -6,6 +6,7 @@
         = link_to t('application.shared.log_out'), destroy_user_session_path, data: {method: :delete}
 
       %ul.list-unstyled.list-inline
+        %li.list-inline-item= link_to t('menu.home'), home_index_path
         %li.list-inline-item= link_to t('menu.departments'), departments_path
         %li.list-inline-item= link_to t('menu.seats'), seats_path
         %li.list-inline-item= link_to t('menu.reservations'), reservations_path
