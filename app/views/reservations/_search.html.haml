@@ -1,0 +1,14 @@
+= search_form_for @q do |f| 
+
+  = f.label :seat_name_or_user_last_name_or_user_first_name_or_seat_department_name_cont, t('search.search')
+  = f.search_field :seat_name_or_user_last_name_or_user_first_name_or_seat_department_name_cont
+
+  .mt-2
+
+  = f.label :from_gteq, t('search.start_date_between')
+  = f.date_field :from_gteq
+
+  = f.label :to_lteq, t('search.and')
+  = f.date_field :from_lteq
+
+  = f.submit

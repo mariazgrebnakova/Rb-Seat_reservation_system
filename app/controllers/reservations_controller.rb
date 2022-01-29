@@ -4,7 +4,8 @@ class ReservationsController < ApplicationController
 
 
     def index
-        @reservations = Reservation.all.page(params[:page])
+        @q = Reservation.ransack(params[:q])
+        @reservations = @q.result.includes(:user, :seat, seat: :department).page(params[:page])
     end
     
     def new

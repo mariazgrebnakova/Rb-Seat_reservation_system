@@ -2,7 +2,8 @@ class DepartmentsController < ApplicationController
     before_action :set_department, only: [:show, :destroy, :edit, :update]
 
     def index
-        @departments = Department.all.page(params[:page])
+        @q = Department.ransack(params[:q])
+        @departments = @q.result(distinct: true).page(params[:page])
     end
 
     def new

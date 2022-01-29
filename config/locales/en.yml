@@ -188,4 +188,9 @@ en:
     previous: "<<"
     next: ">>"
     week: 'Week'
+
+  search:
+    and: 'and'
+    start_date_between: 'Start date between'
+    search: 'Search'
   

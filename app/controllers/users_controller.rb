@@ -5,7 +5,8 @@ class UsersController < ApplicationController
     #authorize_resource
 
     def index
-        @users = User.all.page(params[:page])
+        @q = User.ransack(params[:q])
+        @users = @q.result(distinct: true).page(params[:page])
     end
     
     def new

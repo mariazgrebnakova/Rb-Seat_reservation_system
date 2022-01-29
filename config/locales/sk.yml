@@ -210,3 +210,8 @@ sk:
     next: ">>"
     week: 'Týždeň'
 
+  search:
+    and: 'a'
+    start_date_between: 'Dátum "od" medzi'
+    search: 'Hľadaný výraz'
+

@@ -2,7 +2,8 @@ class SeatsController < ApplicationController
     before_action :set_seat, only: [:show, :destroy, :edit, :update]
     
     def index
-        @seats = Seat.all.page(params[:page])
+        @q = Seat.ransack(params[:q])
+        @seats = @q.result.includes(:department).page(params[:page])
     end
     
     def new

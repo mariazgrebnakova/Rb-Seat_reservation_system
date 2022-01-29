@@ -9,6 +9,7 @@ class Reservation < ApplicationRecord
     validates :seat_id, presence: true
 
     scope :for_range, ->(from, to) { where('"from" <= ? AND "to" >= ?', to, from) }
+    scope :my_reservations, ->{ where('"user_id" = ?', current_user.id) }
 
     private
 
