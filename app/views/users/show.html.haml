@@ -37,4 +37,9 @@
 
 %br
 
-%a.btn.back_button{ href: users_path}= t('users.show.back_to_list')
+.btn.back_button.mt-5 
+  = link_to t('users.show.back_to_list'), users_path, class: 'btn'
+
+-if can?(:edit, current_user)
+  .btn.index_button_edit.mt-5
+    = link_to t('users.edit.edit_user'), edit_user_path(params[:id]), class: 'btn'

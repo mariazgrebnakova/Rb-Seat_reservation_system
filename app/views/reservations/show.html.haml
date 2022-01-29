@@ -35,4 +35,4 @@
 
 -if can?(:edit, current_user)
   .btn.index_button_edit.mt-5
-    = link_to 'Edit', edit_reservation_path(params[:id]), class: 'btn'
+    = link_to t('reservations.edit.edit_reservation'), edit_reservation_path(params[:id]), class: 'btn'

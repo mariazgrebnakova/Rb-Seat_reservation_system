@@ -20,4 +20,9 @@
 
 %br
 
-%a.btn.back_button.mt-5{ href: departments_path }= t('departments.new.back_to_list')
+.btn.back_button.mt-5 
+  = link_to t('departments.show.back_to_list'), departments_path, class: 'btn'
+
+-if can?(:edit, current_user)
+  .btn.index_button_edit.mt-5
+    = link_to t('departments.edit.edit_department'), edit_department_path(params[:id]), class: 'btn'

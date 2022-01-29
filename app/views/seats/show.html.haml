@@ -14,4 +14,9 @@
       %td= t('seats.index.shape')
       %td= @seat.shape
 
-%a.btn.back_button.mt-3{href: seats_path }= t('seats.new.back_to_list')
+.btn.back_button.mt-5 
+  = link_to t('seats.show.back_to_list'), seats_path, class: 'btn'
+
+-if can?(:edit, current_user)
+  .btn.index_button_edit.mt-5
+    = link_to t('seats.edit.edit_seat'), edit_seat_path(params[:id]), class: 'btn'
