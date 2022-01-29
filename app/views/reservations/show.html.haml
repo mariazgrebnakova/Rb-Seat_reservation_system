@@ -30,4 +30,9 @@
       %td= t('reservations.show.created_at')
       %td= @reservation.created_at.getlocal
 
-%a.btn.back_button.mt-5{ href: reservations_path }= t('reservations.show.back_to_list')
+.btn.back_button.mt-5 
+  = link_to t('reservations.show.back_to_list'), reservations_path, class: 'btn'
+
+-if can?(:edit, current_user)
+  .btn.index_button_edit.mt-5
+    = link_to 'Edit', edit_reservation_path(params[:id]), class: 'btn'

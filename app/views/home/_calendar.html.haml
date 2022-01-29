@@ -2,4 +2,5 @@
   = date.day 
 
   -meetings.each do |meeting|
-    = meeting.seat.name
+    %div.event
+      = link_to meeting.seat.name, reservation_path(meeting.id), class: 'event', target: "_blank"
