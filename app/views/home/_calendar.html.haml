@@ -1,2 +1,5 @@
-= month_calendar do |date|
-  = date.day
+= month_calendar(attribute: :from, end_attribute: :to, events: @meetings) do |date, meetings|
+  = date.day 
+
+  -meetings.each do |meeting|
+    = meeting.seat.name
