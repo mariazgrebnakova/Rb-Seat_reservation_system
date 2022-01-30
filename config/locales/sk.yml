@@ -35,6 +35,12 @@ sk:
       edit_user: 'Zmeniť používateľa'
       submit: 'Uložiť'
 
+    alerts:
+      user_saved: 'Používateľ bol úspešne uložený'
+      user_not_saved: 'Používateľ nebol uložený'
+      user_updated: 'Používateľ bol úspešne zmenený'
+      user_not_updated: 'Používateľ nebol zmenený'
+
   devise:
     log_in:
       log_in_button: 'Prihlásiť'
@@ -180,6 +186,10 @@ sk:
     alerts:
       more_reservations_by_user: 'Vybraný používateľ už má v rozmedzí daného dátumu jednu alebo viac rezervácií'
       seat_is_taken: 'Vybrané miesto nie je už pre jeden alebo viacero z vybraných dní obsadené'
+      reservation_saved: 'Rezervácia bola úspešne uložená'
+      reservation_not_saved: 'Rezervácia nebola uložená'
+      reservation_updated: 'Rezervácia bola úspešne zmenená'
+      reservation_not_updated: 'Rezervácia nebola zmenená'
 
   views:
     pagination:

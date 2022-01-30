@@ -18,18 +18,18 @@ class ReservationsController < ApplicationController
         @reservation = Reservation.new(strong_params)
     
         if @reservation.save
-            redirect_to reservations_url, flash: { success: 'Reservation saved...'}
+            redirect_to reservations_url, flash: { success: t('reservations.alerts.reservation_saved')}
         else
-            flash[:danger] = 'Reservation not saved...'
+            flash[:danger] = t('reservations.alerts.reservation_not_saved')
             render :new
         end
     end
     
     def update
         if @reservation.update(strong_params)
-            redirect_to reservation_url(@reservation), flash: { success: 'Reservation updated...'}
+            redirect_to reservation_url(@reservation), flash: { success: t('reservations.alerts.reservation_updated')}
         else
-            flash[:danger] = 'Reservation not updated...'
+            flash[:danger] = t('reservations.alerts.reservation_not_updated')
             render :edit
         end
     end

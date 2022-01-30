@@ -33,6 +33,12 @@ en:
       edit_user: 'Edit user'
       submit: 'Submit'
 
+    alerts:
+      user_saved: 'User was successfully saved'
+      user_not_saved: 'User was not saved'
+      user_updated: 'User was successfully updated'
+      user_not_updated: 'User was not updated'
+
   devise:
     log_in:
       log_in_button: 'Log in'
@@ -179,6 +185,10 @@ en:
     alerts:
       more_reservations_by_user: 'This user has already some reservation for one or more of the chosen dates'
       seat_is_taken: 'The chosen seat is not available at this date range'
+      reservation_saved: 'Reservation was successfully saved'
+      reservation_not_saved: 'Reservation was not saved'
+      reservation_updated: 'Reservation was successfully updated'
+      reservation_not_updated: 'Reservation was not updated'
 
   home:
     index:

@@ -15,18 +15,18 @@ class UsersController < ApplicationController
         @user = User.new(strong_params)
     
         if @user.save
-               redirect_to users_url, flash: { success: 'User saved...'}
+               redirect_to users_url, flash: { success: t('users.alerts.user_saved')}
         else
-                flash[:danger] = 'User not saved...'
+                flash[:danger] = t('users.alerts.user_not_saved')
                 render :new
         end
     end
     
     def update
         if @user.update(strong_params)
-                redirect_to user_url(@user), flash: { success: 'User updated...'}
+                redirect_to user_url(@user), flash: { success: t('users.alerts.user_updated')}
         else
-            flash[:danger] = 'User not updated...'
+            flash[:danger] = t('users.alerts.user_not_updated')
             render :edit
         end
     end
