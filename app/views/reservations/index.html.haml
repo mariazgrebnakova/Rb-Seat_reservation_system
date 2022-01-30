@@ -1,8 +1,9 @@
 %h1.table_headline= t('reservations.index.list_of_reservations')
 
-.row
-  %div{class: 'float-right'}
-    = link_to t('reservations.index.new_reservation'), map_reservations_path, class: 'btn index_button_new'
+-if can? :create, Reservation 
+  .row
+    %div{class: 'float-right'}
+      = link_to t('reservations.index.new_reservation'), map_reservations_path, class: 'btn index_button_new'
 
 = render'search'
 

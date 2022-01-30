@@ -17,11 +17,14 @@
           %td= seat.name
           %td= seat.department.name if seat.department_id.present?
           %td
-            %a.index_button_show{ href: seat_path(seat), class: 'btn' }= t('seats.index.show')
+            - if can? :read, seat
+              %a.index_button_show{ href: seat_path(seat), class: 'btn' }= t('seats.index.show')
           %td
-            %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
+            - if can? :delete, seat
+              %a{ href: seat_path(seat), data: { method: :delete }, class:'btn btn-danger'}= t('seats.index.delete')
           %td
-            %a.index_button_edit{ href: edit_seat_path(seat), class:'btn'}= t('seats.index.edit')
+            - if can? :edit, seat
+              %a.index_button_edit{ href: edit_seat_path(seat), class:'btn'}= t('seats.index.edit')
 
 .row
   .col-6= paginate @seats

@@ -7,20 +7,26 @@
   %tr
     %th= t('departments.index.department_name')
     %th= t('departments.index.department_code')
-    %th
-    %th
-    %th
+    - if can? :read, Department
+      %th
+    - if can? :delete, Department
+      %th
+    - if can? :edit, Department
+      %th
   %tbody
     - @departments.each do |department|
       %tr
       %td= department.name
       %td= department.code
-      %td
-        %a.index_button_show{ href: department_path(department), class:'btn' }= t('departments.index.detail')
-      %td
-        %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
-      %td
-        %a.index_button_edit{ href: edit_department_path(department),  class:'btn'}= t('departments.index.edit')
+      -if can? :read, Department
+        %td
+          %a.index_button_show{ href: department_path(department), class:'btn' }= t('departments.index.detail')
+      - if can? :delete, Department
+        %td
+          %a{ href: department_path(department), data: { method: :delete }, class:'btn btn-danger'}= t('departments.index.delete')
+      - if can? :edit, Department
+        %td
+          %a.index_button_edit{ href: edit_department_path(department),  class:'btn'}= t('departments.index.edit')
 
 .row
   .col-6= paginate @departments

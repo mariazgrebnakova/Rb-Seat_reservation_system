@@ -10,9 +10,8 @@
       %th= t('users.index.last_name')
       %th= t('users.index.email')
       %th= t('users.index.department')
-      - [:delete, :edit].each do |action|
-        - if can?(action, current_user)
-          %th
+      %th
+      %th
       %th
             
   %tbody
@@ -23,12 +22,13 @@
         %td= user.email
         %td= user.department.name if user.department_id.present?
         %td
-          %a.index_button_show{ href: user_path(user), class: 'btn' }= t('users.index.detail')
-        - if can?(:delete, current_user)
-          %td
+          - if can? :read, user
+            %a.index_button_show{ href: user_path(user), class: 'btn' }= t('users.index.detail')
+        %td
+          - if can? :delete, user
             = link_to t('users.index.delete'), user, method: :delete, data: { confirm: t('users.index.confirm_delete') }, class: 'btn btn-danger'
-        - if can?(:edit, current_user)
-          %td
+        %td
+          - if can? :edit, user
             %a.index_button_edit{ href: edit_user_path(user), class:'btn'}= t('users.index.edit')
 
 .row
