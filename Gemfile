@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   gem 'factory_bot'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -60,7 +61,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "haml-rails", "~> 2.0"
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'bullet'
 gem 'rollbar'
 gem 'cancancan'
