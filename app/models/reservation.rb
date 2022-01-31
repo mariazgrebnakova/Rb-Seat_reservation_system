@@ -7,43 +7,44 @@ class Reservation < ApplicationRecord
     validate :validates_user_has_no_reservation
 
     validates :seat_id, presence: true
+    validates :from, presence: true
+    validates :to, presence: true
 
     scope :for_range, ->(from, to) { where('"from" <= ? AND "to" >= ?', to, from) }
 
     private
 
-    def from_must_be_before_to_date
-        errors.add(:from, "Invalid range") unless
-            from <= to
+    def from_must_be_before_to_date     
+        errors.add(:from, "Invalid range") if from && to && from >= to
     end
 
     def seat_is_reserved_dates
         reserved_dates = []
         reserved_place = seat_id
+
         Reservation.where(seat_id: reserved_place).each do |range|
             (range.from..range.to).each do |date|
                 reserved_dates << date
             end      
         end
-        return reserved_dates
+
+        reserved_dates
     end
 
     def validate_seat_is_empty
-        errors.add(:seat_id, "Seat is taken") unless
-            is_seat_empty == true
+        errors.add(:seat_id, "Seat is taken") unless is_seat_empty
     end
 
     def is_seat_empty
-        does_not_include = true
+        return false unless from && to
+
         reserved_dates = seat_is_reserved_dates
+
         (from..to).each do |date|
-            if  reserved_dates.nil?
-                does_not_include = true
-            elsif date.in? reserved_dates
-                does_not_include = false
-            end
+            return false if date.in? reserved_dates
         end
-        return does_not_include
+
+        true
     end
 
     def user_reservations_dates
@@ -58,16 +59,16 @@ class Reservation < ApplicationRecord
     end
 
     def user_has_no_reservation
-        has_no_reservation = true
+        return false unless from && to
+ #       has_no_reservation = true
+
         reservation_dates = user_reservations_dates
+
         (from..to).each do |date|
-            if  reservation_dates.nil?
-                has_no_reservation = true
-            elsif date.in? reservation_dates
-                has_no_reservation = false
-            end
+            return false if date.in? reservation_dates
         end
-        return has_no_reservation
+
+        true
     end
 
     def validates_user_has_no_reservation

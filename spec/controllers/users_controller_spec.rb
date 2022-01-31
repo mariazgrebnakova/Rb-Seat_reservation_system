@@ -63,7 +63,7 @@ RSpec.describe UsersController, type: :controller do
     context 'invalid' do
       it 'returns not saved user' do
         post :create, params: { user: { first_name: '' } }
-        expect(flash[:danger]).to eq "Používateľ nebol uložený"
+        expect(flash[:danger]).to eq I18n.t('users.alerts.user_not_saved')
       end
     end
   end

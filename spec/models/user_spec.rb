@@ -16,6 +16,7 @@ RSpec.describe User, type: :model do
   describe 'associations' do
     it { should belong_to(:department) }
     it { should belong_to(:user_type) }
+    it { should have_many(:reservations) }
   end
 
   describe '.full_name' do
