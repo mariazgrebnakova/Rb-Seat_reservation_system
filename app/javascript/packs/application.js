@@ -21,7 +21,6 @@ ActiveStorage.start()
 
 $(document).on('turbolinks:load', function() {
     $('.map').maphilight({
-        /*fillColor: '880808',*/
         alwaysOn: true
     });
 
@@ -34,7 +33,7 @@ $(document).on('turbolinks:load', function() {
             data = {}
             $('[name=seat_id]').val(null)
         } else {
-            data.fillColor = '00ffff'; // svetlomodra
+            data.fillColor = 'E2F015'; // zlta
             $('[name=seat_id]').val(seat_id)
         }
         $('#seat_id').trigger('change')

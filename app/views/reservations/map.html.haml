@@ -22,7 +22,7 @@
   %map.image-map{ name: 'image-map' }
     - @seats.where(department_id: current_user.department_id).each do |seat|
       - is_free = @reservations_by_seat.key?(seat.id)
-      - color = is_free ? 'FA8072' : '3CB371' # FA8072 = red, 3CB371 = green
+      - color = is_free ? '930B0B' : '119406' # 930B0B = red, 119406 = green
       - area_class_name = is_free ? '' : 'is_seat_free'
 
       %area{ alt: seat.name, coords: seat.coordinates, shape: seat.shape, title: seat.name, class: "{fillColor:'#{color}'} #{area_class_name}", data: { id: seat.id } }
