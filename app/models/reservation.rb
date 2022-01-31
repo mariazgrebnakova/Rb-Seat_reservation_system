@@ -15,7 +15,7 @@ class Reservation < ApplicationRecord
     private
 
     def from_must_be_before_to_date     
-        errors.add(:from, "Invalid range") if from && to && from >= to
+        errors.add(:from, "Invalid range") if from && to && from > to
     end
 
     def seat_is_reserved_dates
