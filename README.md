@@ -5,6 +5,7 @@ Live demo: http://ruby-seat-reservation-project.herokuapp.com
 ## Dependencies
 
 Ruby version: 3.0.0
+
 PostgreSQL: 12.9
 
 ## Configuration
