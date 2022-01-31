@@ -1,24 +1,31 @@
-# README
+# Rb - Seat reservation app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live demo: http://ruby-seat-reservation-project.herokuapp.com
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+Ruby version: 3.0.0
+PostgreSQL: 12.9
 
-* System dependencies
+## Configuration
 
-* Configuration
+First set up database:
+`rake db:migrate`
 
-* Database creation
+Then update gems by:
+`bundle install`
 
-* Database initialization
+Create first department, user_type and admin user:
+```rails c
+Department.new(name: 'IT Support', code:'IT').save!
+UserType.new(name: 'Administrator').save!
+User.new(first_name: 'Hubert', last_name:'Sampan',is_admin:true, department_id: 1, user_type_id: 1, email: 'hubert@admin.com', password:'hubertistheboss').save!
+```
 
-* How to run the test suite
+Start server by running:
+`rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Tests
 
-* Deployment instructions
-
-* ...
+Run tests by:
+`rspec`
